@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "50_item_env_nightcap",
+    "actors": {},
+    "children": {}
+}

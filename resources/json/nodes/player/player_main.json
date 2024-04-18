@@ -1,0 +1,121 @@
+{
+    "name": "player_main",
+    "actors": {
+        "point": {
+            "position": [2560.0, 200.0, 900.0]
+        },
+        "capsule_collider_module": {
+            "height": 1.1,
+            "radius": 0.4,
+            "center": [0.0, 0.55, 0.0],
+            "is_trigger": false
+        },
+        "body_module": {
+            "mass": 1.0,
+            "drag": 0.0,
+            "angular_drag": 0.05,
+            "is_gravity": true,
+            "is_kinematic": false,
+            "interpolate": "none",
+            "collision": "continuous",
+            "constraints": "rotation"
+        },
+        "body_ticker": {
+            "grounded_threshold": 1.0,
+            "speed_target": 16.0
+        },
+        "input_actor": {
+
+        },
+        "cast_ticker": {
+            "feet_forward": {
+                "is_update": true,
+                "args": {
+                    "type": "ray",
+                    "origin": [0.0, 0.1, 0.0],
+                    "is_origin_local": true,
+                    "direction_local": "forward",
+                    "distance": 10.0,
+                    "layer_mask": ["Terrain"]
+                }
+            },
+            "head_forward": {
+                "is_update": true,
+                "args": {
+                    "type": "ray",
+                    "origin": [0.0, 1.5, 0.0],
+                    "is_origin_local": true,
+                    "direction_local": "forward",
+                    "distance": 10.0,
+                    "layer_mask": ["Terrain"]
+                }
+            },
+            "grounded": {
+                "is_update": true,
+                "args": {
+                    "type": "box",
+                    "origin": [0.0, -0.1, 0.0],
+                    "radius": 0.4,
+                    "is_origin_local": true,
+                    "direction": [0.0, -1.0, 0.0],
+                    "extents": [0.5, 0.3, 0.5],
+                    "rotation": [0.0, 0.0, 0.0, 1.0],
+                    "distance": 1.0,
+                    "layer_mask": ["Terrain"]
+                }
+            },
+            "terrain_front": {
+                "is_update": false,
+                "args": {
+                    "type": "ray",
+                    "origin": [0.0, 0.0, 0.0],
+                    "direction": [0.0, -1.0, 0.0],
+                    "distance": 1000.0,
+                    "layer_mask": ["Terrain"]
+                }
+            },
+            "terrain": {
+                "is_update": false,
+                "args": {
+                    "type": "sphere",
+                    "is_origin_local": true,
+                    "origin": [0.0, 1.0, 0.6],
+                    "radius": 0.1,
+                    "direction": [0.0, -1.0, 0.0],
+                    "distance": 0.5,
+                    "layer_mask": ["Terrain"]
+                }
+            }
+        },
+        "abilities_ticker": {
+
+        },
+        "ability_idle": {
+
+        },
+        "ability_player_locomotion": {
+            "priority": 1,
+            "y_factor": 10.0
+        },
+        "ability_player_falling": {
+            "priority": 2
+        },
+        "ability_player_jump": {
+            "priority": 3,
+            "jump_height": 1.5
+        }
+    },
+    "children": {
+        "cube_placeholder": {
+            "is_prefab": true,
+            "prefab_name": "unit_cube",
+            "actors": {
+                "point": {
+                    "is_local": true,
+                    "position": [0.0, 0.55, 0.0],
+                    "scale": [0.8, 1.1, 0.8]
+                }
+            }
+        }
+    }
+}

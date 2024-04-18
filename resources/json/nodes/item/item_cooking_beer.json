@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "345_item_cooking_beer",
+    "actors": {},
+    "children": {
+        "item_cooking_beer.001": {}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "602_item_cooking_bagel",
+    "actors": {},
+    "children": {}
+}

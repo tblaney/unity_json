@@ -1,0 +1,15 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "939_item_crop_bushes",
+    "actors": {},
+    "children": {
+        "item_prop_bush_01": {},
+        "item_prop_bush_02": {},
+        "item_prop_bush_03": {},
+        "item_prop_bush_04": {},
+        "item_prop_bush_05": {},
+        "item_prop_bush_rhubarb": {},
+        "item_prop_bush_tea": {}
+    }
+}

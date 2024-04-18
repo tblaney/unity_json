@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "3_item_cooking_cherry_jam",
+    "actors": {},
+    "children": {}
+}

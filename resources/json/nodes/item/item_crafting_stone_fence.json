@@ -1,0 +1,12 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "323_item_crafting_stone_fence",
+    "actors": {},
+    "children": {
+        "item_crafting_fence_stone_wall_b": {},
+        "item_crafting_fence_stone_wall_f": {},
+        "item_crafting_fence_stone_wall_l": {},
+        "item_crafting_fence_stone_wall_r": {}
+    }
+}

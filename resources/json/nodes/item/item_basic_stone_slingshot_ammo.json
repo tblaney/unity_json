@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "48_item_basic_stone_slingshot_ammo",
+    "actors": {},
+    "children": {}
+}

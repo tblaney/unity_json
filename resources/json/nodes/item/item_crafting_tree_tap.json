@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "744_item_crafting_tree_tap",
+    "actors": {},
+    "children": {
+        "item_crafting_tree_tap_bucket": {}
+    }
+}

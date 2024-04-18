@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_item",
+    "is_prefab": true,
+    "prefab_name": "1016_item_item_mineral_qi_gem",
+    "actors": {},
+    "children": {}
+}

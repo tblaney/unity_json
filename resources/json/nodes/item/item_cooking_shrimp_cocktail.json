@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "733_item_cooking_shrimp_cocktail",
+    "actors": {},
+    "children": {
+        "item_cooking_shimp_cocktail_props": {}
+    }
+}

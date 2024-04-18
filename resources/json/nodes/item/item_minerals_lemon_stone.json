@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_minerals",
+    "is_prefab": true,
+    "prefab_name": "554_item_minerals_lemon_stone",
+    "actors": {},
+    "children": {}
+}

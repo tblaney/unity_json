@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "178_item_basic_hay",
+    "actors": {},
+    "children": {
+        "item_basic_hay_bale_01": {},
+        "item_basic_hay_bale_02": {}
+    }
+}

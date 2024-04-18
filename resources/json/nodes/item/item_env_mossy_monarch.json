@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "33_item_env_mossy_monarch",
+    "actors": {},
+    "children": {}
+}

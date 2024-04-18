@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "85_item_clothing_viking_helmet",
+    "actors": {},
+    "children": {
+        "item_clothing_viking_helmet_mannequin": {}
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "873_item_cooking_pina_colada",
+    "actors": {},
+    "children": {
+        "item_cooking_pina_colada_liquid": {}
+    }
+}

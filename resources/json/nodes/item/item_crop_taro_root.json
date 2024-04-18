@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "957_item_crop_taro_root",
+    "actors": {},
+    "children": {}
+}

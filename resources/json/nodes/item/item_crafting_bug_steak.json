@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "874_item_crafting_bug_steak",
+    "actors": {},
+    "children": {}
+}

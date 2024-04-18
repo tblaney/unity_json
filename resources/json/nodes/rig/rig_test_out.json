@@ -1,0 +1,254 @@
+{
+    "name": "chr_rig",
+    "inherit_from": "rig",
+    "actors": {},
+    "children": {
+        "root": {
+            "name": "root",
+            "inherit_from": "rig_bone",
+            "actors": {
+                "point": {
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": [
+                        90.00000933466734,
+                        -0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ]
+                }
+            },
+            "children": {
+                "rotator_torso": {
+                    "name": "rotator_torso",
+                    "inherit_from": "rig_bone",
+                    "actors": {
+                        "point": {
+                            "position": [
+                                0.0,
+                                0.30000001192092896,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                -0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "children": {
+                        "positional_torso": {
+                            "name": "positional_torso",
+                            "inherit_from": "rig_bone",
+                            "actors": {
+                                "point": {
+                                    "position": [
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "rotation": [
+                                        2.0456399488715262,
+                                        3.056342511017813e-16,
+                                        4.872287035830839e-16
+                                    ],
+                                    "scale": [
+                                        1.0,
+                                        1.0,
+                                        1.0
+                                    ]
+                                }
+                            },
+                            "children": {
+                                "positional_arms": {
+                                    "name": "positional_arms",
+                                    "inherit_from": "rig_bone",
+                                    "actors": {
+                                        "point": {
+                                            "position": [
+                                                -4.1359030627651384e-25,
+                                                0.7999999523162842,
+                                                3.725290298461914e-09
+                                            ],
+                                            "rotation": [
+                                                2.8249000307521015e-30,
+                                                1.3660378340025502e-05,
+                                                2.3696978997167325e-23
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ]
+                                        }
+                                    },
+                                    "children": {
+                                        "rotator_arms_center": {
+                                            "name": "rotator_arms_center",
+                                            "inherit_from": "rig_bone",
+                                            "actors": {
+                                                "point": {
+                                                    "position": [
+                                                        0.0,
+                                                        -1.979060471057892e-08,
+                                                        0.0
+                                                    ],
+                                                    "rotation": [
+                                                        1.3660383225357492e-05,
+                                                        2.1344595600664364e-07,
+                                                        -90.00002982523485
+                                                    ],
+                                                    "scale": [
+                                                        1.0,
+                                                        1.0,
+                                                        1.0
+                                                    ]
+                                                }
+                                            },
+                                            "children": {
+                                                "positional_arm_r": {
+                                                    "name": "positional_arm_r",
+                                                    "inherit_from": "rig_bone",
+                                                    "actors": {
+                                                        "point": {
+                                                            "position": [
+                                                                -1.7904676496982574e-07,
+                                                                0.5,
+                                                                0.0
+                                                            ],
+                                                            "rotation": [
+                                                                -2.1344651578426757e-07,
+                                                                -1.3660381596913497e-05,
+                                                                90.00002982523485
+                                                            ],
+                                                            "scale": [
+                                                                1.0,
+                                                                1.0,
+                                                                1.0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "children": {
+                                                        "rotator_hand_r": {
+                                                            "name": "rotator_hand_r",
+                                                            "inherit_from": "rig_bone",
+                                                            "actors": {
+                                                                "point": {
+                                                                    "position": [
+                                                                        0.0002968907356262207,
+                                                                        0.00041953660547733307,
+                                                                        -0.00027621909976005554
+                                                                    ],
+                                                                    "rotation": [
+                                                                        -2.9056759402956186e-05,
+                                                                        -1.088560991859783e-05,
+                                                                        -89.99998884409983
+                                                                    ],
+                                                                    "scale": [
+                                                                        1.0,
+                                                                        1.0,
+                                                                        1.0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "children": {}
+                                                        }
+                                                    }
+                                                },
+                                                "positonal_arm_l": {
+                                                    "name": "positonal_arm_l",
+                                                    "inherit_from": "rig_bone",
+                                                    "actors": {
+                                                        "point": {
+                                                            "position": [
+                                                                2.183951437473297e-07,
+                                                                -0.5,
+                                                                0.0
+                                                            ],
+                                                            "rotation": [
+                                                                -2.1343960761949942e-07,
+                                                                1.366038485380149e-05,
+                                                                90.00002982523485
+                                                            ],
+                                                            "scale": [
+                                                                1.0,
+                                                                1.0,
+                                                                1.0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "children": {
+                                                        "rotator_hand_l": {
+                                                            "name": "rotator_hand_l",
+                                                            "inherit_from": "rig_bone",
+                                                            "actors": {
+                                                                "point": {
+                                                                    "position": [
+                                                                        -0.0002968311309814453,
+                                                                        -0.0004197554662823677,
+                                                                        0.0002762041985988617
+                                                                    ],
+                                                                    "rotation": [
+                                                                        -2.9056759402956186e-05,
+                                                                        1.0885608290153833e-05,
+                                                                        89.99996835353231
+                                                                    ],
+                                                                    "scale": [
+                                                                        1.0,
+                                                                        1.0,
+                                                                        1.0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "children": {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "rotator_head": {
+                                    "name": "rotator_head",
+                                    "inherit_from": "rig_bone",
+                                    "actors": {
+                                        "point": {
+                                            "position": [
+                                                0.0,
+                                                0.9999999403953552,
+                                                -3.725290298461914e-09
+                                            ],
+                                            "rotation": [
+                                                0.0,
+                                                1.1848489498583662e-23,
+                                                2.3696978997167325e-23
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ]
+                                        }
+                                    },
+                                    "children": {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

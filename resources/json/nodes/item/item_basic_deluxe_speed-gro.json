@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "466_item_basic_deluxe_speed-gro",
+    "actors": {},
+    "children": {}
+}

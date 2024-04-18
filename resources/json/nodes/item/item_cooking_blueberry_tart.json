@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "234_item_cooking_blueberry_tart",
+    "actors": {},
+    "children": {}
+}

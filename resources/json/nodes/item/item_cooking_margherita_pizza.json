@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "206_item_cooking_margherita_pizza",
+    "actors": {},
+    "children": {}
+}

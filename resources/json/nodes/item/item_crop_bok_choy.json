@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "976_item_crop_bok_choy",
+    "actors": {},
+    "children": {
+        "item_crop_bok_choy_prop": {}
+    }
+}

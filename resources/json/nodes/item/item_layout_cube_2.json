@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_layout",
+    "is_prefab": true,
+    "prefab_name": "937_item_layout_cube_2",
+    "actors": {},
+    "children": {}
+}

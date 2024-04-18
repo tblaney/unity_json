@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "200_item_cooking_vegetable_medley",
+    "actors": {},
+    "children": {}
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_minerals",
+    "is_prefab": true,
+    "prefab_name": "577_item_minerals_fairy_stone",
+    "actors": {},
+    "children": {}
+}

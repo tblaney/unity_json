@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "1012_item_env_mineral_opal",
+    "actors": {},
+    "children": {
+        "item_env_mineral_opal_l": {},
+        "item_env_mineral_sopal_s": {}
+    }
+}

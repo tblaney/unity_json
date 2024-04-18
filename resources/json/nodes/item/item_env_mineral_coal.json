@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "993_item_env_mineral_coal",
+    "actors": {},
+    "children": {
+        "item_env_mineral_coal_l": {},
+        "item_env_mineral_coal_ore": {},
+        "item_env_mineral_coal_s": {}
+    }
+}

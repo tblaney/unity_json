@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "157_item_env_white_algae",
+    "actors": {},
+    "children": {}
+}

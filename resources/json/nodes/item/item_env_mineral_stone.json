@@ -1,0 +1,15 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "1003_item_env_mineral_stone",
+    "actors": {},
+    "children": {
+        "item_env_mineral_stone_01": {},
+        "item_env_mineral_stone_02": {},
+        "item_env_mineral_stone_03": {},
+        "item_env_mineral_stone_04": {},
+        "item_env_mineral_stone_05": {},
+        "item_env_mineral_stone_06": {},
+        "item_env_mineral_stone_07": {}
+    }
+}

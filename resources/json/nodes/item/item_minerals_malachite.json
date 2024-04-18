@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_minerals",
+    "is_prefab": true,
+    "prefab_name": "552_item_minerals_malachite",
+    "actors": {},
+    "children": {}
+}

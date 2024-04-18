@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "592_item_clothing_short_toque",
+    "actors": {},
+    "children": {
+        "item_clothing_short_toque_mannequin": {}
+    }
+}

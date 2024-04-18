@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_seeds",
+    "is_prefab": true,
+    "prefab_name": "433_item_seeds_coffee_bean",
+    "actors": {},
+    "children": {}
+}

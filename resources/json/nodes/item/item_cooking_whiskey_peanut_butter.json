@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "672_item_cooking_whiskey_peanut_butter",
+    "actors": {},
+    "children": {}
+}

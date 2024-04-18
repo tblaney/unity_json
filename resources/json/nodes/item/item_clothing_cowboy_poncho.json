@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "53_item_clothing_cowboy_poncho",
+    "actors": {},
+    "children": {
+        "item_clothing_cowboy_poncho_mannequin": {}
+    }
+}

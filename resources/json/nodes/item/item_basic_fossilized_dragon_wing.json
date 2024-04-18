@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "822_item_basic_fossilized_dragon_wing",
+    "actors": {},
+    "children": {
+        "item_basic_fossilized_dragon_wing_l": {},
+        "item_basic_fossilized_dragon_wing_r": {}
+    }
+}

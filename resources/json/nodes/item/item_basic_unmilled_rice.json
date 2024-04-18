@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "271_item_basic_unmilled_rice",
+    "actors": {},
+    "children": {}
+}

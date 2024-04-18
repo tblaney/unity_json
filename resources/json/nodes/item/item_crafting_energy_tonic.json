@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "349_item_crafting_energy_tonic",
+    "actors": {},
+    "children": {}
+}

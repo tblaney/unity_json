@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "225_item_cooking_bento_box",
+    "actors": {},
+    "children": {}
+}

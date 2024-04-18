@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "253_item_cooking_triple_shot_espresso",
+    "actors": {},
+    "children": {}
+}

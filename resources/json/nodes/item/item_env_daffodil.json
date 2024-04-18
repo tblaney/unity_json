@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "18_item_env_daffodil",
+    "actors": {},
+    "children": {
+        "item_basic_daffodil_02": {},
+        "item_basic_daffodil_01": {}
+    }
+}

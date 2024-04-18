@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "169_item_basic_driftwood",
+    "actors": {},
+    "children": {
+        "item_basic_driftwood_pile_01": {},
+        "item_basic_driftwood_pile_02": {},
+        "item_basic_driftwood_pile_03": {}
+    }
+}

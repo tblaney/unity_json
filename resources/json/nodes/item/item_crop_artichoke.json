@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "969_item_crop_artichoke",
+    "actors": {},
+    "children": {
+        "item_crop_artichoke_prop": {}
+    }
+}

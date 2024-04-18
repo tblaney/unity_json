@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "1010_item_env_tree_mushroom_03",
+    "actors": {},
+    "children": {}
+}

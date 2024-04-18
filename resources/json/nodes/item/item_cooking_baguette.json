@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "603_item_cooking_baguette",
+    "actors": {},
+    "children": {}
+}

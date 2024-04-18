@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "407_item_crafting_brick_path",
+    "actors": {},
+    "children": {
+        "item_crafting_brick_path_01": {},
+        "item_crafting_brick_path_02": {},
+        "item_crafting_brick_path_03": {}
+    }
+}

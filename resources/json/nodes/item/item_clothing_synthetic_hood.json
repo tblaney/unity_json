@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "596_item_clothing_synthetic_hood",
+    "actors": {},
+    "children": {
+        "item_clothing_synthetic_hood_mannequin": {}
+    }
+}

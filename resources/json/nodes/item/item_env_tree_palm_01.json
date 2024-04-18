@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "1029_item_env_tree_palm_01",
+    "actors": {},
+    "children": {
+        "item_env_tree_palm_01_broken": {},
+        "item_env_tree_palm_01_m": {}
+    }
+}

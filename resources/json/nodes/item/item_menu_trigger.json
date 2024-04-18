@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_menu",
+    "is_prefab": true,
+    "prefab_name": "1037_item_menu_trigger",
+    "actors": {},
+    "children": {
+        "item_menu_trigger_bottle": {}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "986_item_env_plant_elephant_ear_02",
+    "actors": {},
+    "children": {}
+}

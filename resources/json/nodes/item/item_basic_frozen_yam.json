@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "416_item_basic_frozen_yam",
+    "actors": {},
+    "children": {}
+}

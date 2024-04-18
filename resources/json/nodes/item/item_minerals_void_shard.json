@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_minerals",
+    "is_prefab": true,
+    "prefab_name": "263_item_minerals_void_shard",
+    "actors": {},
+    "children": {}
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_asdf",
+    "is_prefab": true,
+    "prefab_name": "590_item_asdf_artifact_spot",
+    "actors": {},
+    "children": {}
+}

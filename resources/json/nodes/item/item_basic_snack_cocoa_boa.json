@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "661_item_basic_snack_cocoa_boa",
+    "actors": {},
+    "children": {}
+}

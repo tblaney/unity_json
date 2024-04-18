@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "805_item_basic_tree_fertilizer",
+    "actors": {},
+    "children": {
+        "item_basic_tree_fertilizer_prop": {}
+    }
+}

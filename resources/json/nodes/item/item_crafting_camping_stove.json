@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "683_item_crafting_camping_stove",
+    "actors": {},
+    "children": {
+        "item_crafting_camping_stove_prop_cooking": {}
+    }
+}

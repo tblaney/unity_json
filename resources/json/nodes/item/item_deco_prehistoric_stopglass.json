@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_deco",
+    "is_prefab": true,
+    "prefab_name": "125_item_deco_prehistoric_stopglass",
+    "actors": {},
+    "children": {}
+}

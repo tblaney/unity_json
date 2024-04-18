@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "640_item_cooking_bug_meat_bbq_skewer",
+    "actors": {},
+    "children": {}
+}

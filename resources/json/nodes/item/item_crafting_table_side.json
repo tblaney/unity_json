@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "741_item_crafting_table_side",
+    "actors": {},
+    "children": {
+        "item_deco_table_side_70s": {},
+        "item_deco_table_side_basic": {},
+        "item_deco_table_side_minimal": {}
+    }
+}

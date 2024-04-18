@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "414_item_basic_crystal_fruit",
+    "actors": {},
+    "children": {}
+}

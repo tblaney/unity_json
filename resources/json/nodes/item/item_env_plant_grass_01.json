@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "988_item_env_plant_grass_01",
+    "actors": {},
+    "children": {}
+}

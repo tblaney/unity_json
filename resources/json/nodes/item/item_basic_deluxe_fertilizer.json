@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "919_item_basic_deluxe_fertilizer",
+    "actors": {},
+    "children": {}
+}

@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "774_item_basic_wild_bait",
+    "actors": {},
+    "children": {
+        "item_basic_fish_bait_wild_contents": {}
+    }
+}

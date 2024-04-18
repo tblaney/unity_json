@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "941_item_crop_corn_bush",
+    "actors": {},
+    "children": {
+        "item_crop_corn": {},
+        "item_crop_corn.002": {},
+        "item_crop_corn.003": {}
+    }
+}

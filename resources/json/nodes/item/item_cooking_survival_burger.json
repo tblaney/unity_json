@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "241_item_cooking_survival_burger",
+    "actors": {},
+    "children": {}
+}

@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "376_item_basic_poppy",
+    "actors": {},
+    "children": {
+        "item_basic_poppy_01": {},
+        "item_basic_poppy_02": {}
+    }
+}

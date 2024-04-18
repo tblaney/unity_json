@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_minerals",
+    "is_prefab": true,
+    "prefab_name": "557_item_minerals_petrified_slime",
+    "actors": {},
+    "children": {}
+}

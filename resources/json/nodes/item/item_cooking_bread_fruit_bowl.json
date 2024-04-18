@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "616_item_cooking_bread_fruit_bowl",
+    "actors": {},
+    "children": {}
+}

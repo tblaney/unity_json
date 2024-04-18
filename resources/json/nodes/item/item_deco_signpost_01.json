@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_deco",
+    "is_prefab": true,
+    "prefab_name": "1038_item_deco_signpost_01",
+    "actors": {},
+    "children": {}
+}

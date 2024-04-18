@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "59_item_clothing_hippie_glasses",
+    "actors": {},
+    "children": {
+        "item_clothing_hippie_glasses_mannequin": {}
+    }
+}

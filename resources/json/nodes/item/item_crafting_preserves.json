@@ -1,0 +1,12 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "714_item_crafting_preserves",
+    "actors": {},
+    "children": {
+        "item_crafting_prop_barrel": {},
+        "item_crafting_prop_barrel_output": {},
+        "item_crafting_prop_pipes": {},
+        "item_crafting_prop_preserves_table": {}
+    }
+}

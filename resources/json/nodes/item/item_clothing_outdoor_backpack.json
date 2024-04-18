@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "65_item_clothing_outdoor_backpack",
+    "actors": {},
+    "children": {
+        "item_clothing_outdoor_backpack_mannequin": {}
+    }
+}

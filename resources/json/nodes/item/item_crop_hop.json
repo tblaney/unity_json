@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "967_item_crop_hop",
+    "actors": {},
+    "children": {
+        "item_crop_hop_props": {}
+    }
+}

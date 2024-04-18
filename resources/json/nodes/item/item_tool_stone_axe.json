@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_tool",
+    "is_prefab": true,
+    "prefab_name": "285_item_tool_stone_axe",
+    "actors": {},
+    "children": {}
+}

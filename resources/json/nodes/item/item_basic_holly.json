@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "283_item_basic_holly",
+    "actors": {},
+    "children": {}
+}

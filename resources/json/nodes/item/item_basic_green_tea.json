@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "614_item_basic_green_tea",
+    "actors": {},
+    "children": {
+        "item_basic_green_tea_props": {}
+    }
+}

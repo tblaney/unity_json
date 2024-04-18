@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "990_item_env_mineral_luminous_rift",
+    "actors": {},
+    "children": {
+        "item_env_mineral_luminous_rift_gem_ore": {}
+    }
+}

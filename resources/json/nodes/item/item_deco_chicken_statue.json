@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_deco",
+    "is_prefab": true,
+    "prefab_name": "113_item_deco_chicken_statue",
+    "actors": {},
+    "children": {}
+}

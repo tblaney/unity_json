@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_tool",
+    "is_prefab": true,
+    "prefab_name": "804_item_tool_watering_can_quality",
+    "actors": {},
+    "children": {}
+}

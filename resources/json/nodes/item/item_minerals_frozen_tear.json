@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_minerals",
+    "is_prefab": true,
+    "prefab_name": "84_item_minerals_frozen_tear",
+    "actors": {},
+    "children": {}
+}

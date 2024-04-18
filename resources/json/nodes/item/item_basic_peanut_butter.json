@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "512_item_basic_peanut_butter",
+    "actors": {},
+    "children": {
+        "item_basic_peanut_butter_inside": {}
+    }
+}

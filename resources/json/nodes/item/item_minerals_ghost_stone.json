@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_minerals",
+    "is_prefab": true,
+    "prefab_name": "561_item_minerals_ghost_stone",
+    "actors": {},
+    "children": {}
+}

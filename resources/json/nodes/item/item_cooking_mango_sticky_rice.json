@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "905_item_cooking_mango_sticky_rice",
+    "actors": {},
+    "children": {}
+}

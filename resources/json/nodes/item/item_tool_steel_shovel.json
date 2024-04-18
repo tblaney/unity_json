@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_tool",
+    "is_prefab": true,
+    "prefab_name": "783_item_tool_steel_shovel",
+    "actors": {},
+    "children": {}
+}

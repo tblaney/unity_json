@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "910_item_basic_radioactive_bar",
+    "actors": {},
+    "children": {}
+}

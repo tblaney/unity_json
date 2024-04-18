@@ -1,0 +1,13 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "294_item_crafting_twig",
+    "actors": {},
+    "children": {
+        "item_crafting_prop_twig_01": {},
+        "item_crafting_prop_twig_02": {},
+        "item_crafting_prop_twig_03": {},
+        "item_crafting_prop_twig_04": {},
+        "item_crafting_prop_twig_05": {}
+    }
+}

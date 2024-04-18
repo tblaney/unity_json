@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "420_item_basic_red_mushroom",
+    "actors": {},
+    "children": {}
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_deco",
+    "is_prefab": true,
+    "prefab_name": "110_item_deco_ancient_ladle",
+    "actors": {},
+    "children": {}
+}

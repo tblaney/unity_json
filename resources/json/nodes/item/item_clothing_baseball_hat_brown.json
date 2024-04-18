@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "51_item_clothing_baseball_hat_brown",
+    "actors": {},
+    "children": {
+        "item_clothing_baseball_hat_brown_mannequin": {}
+    }
+}

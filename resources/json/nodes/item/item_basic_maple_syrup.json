@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "724_item_basic_maple_syrup",
+    "actors": {},
+    "children": {
+        "item_cooking_maple_syrup_inside": {}
+    }
+}

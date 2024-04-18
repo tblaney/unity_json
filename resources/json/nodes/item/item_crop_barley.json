@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "966_item_crop_barley",
+    "actors": {},
+    "children": {
+        "item_env_plant_barley_01": {},
+        "item_env_plant_barley_02": {}
+    }
+}

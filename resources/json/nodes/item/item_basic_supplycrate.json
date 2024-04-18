@@ -1,0 +1,13 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "922_item_basic_supplycrate",
+    "actors": {},
+    "children": {
+        "item_basic_supplycrate_01": {},
+        "item_basic_supplycrate_02": {},
+        "item_basic_supplycrate_03": {},
+        "item_basic_supplycrate_04": {},
+        "item_basic_supplycrate_05": {}
+    }
+}

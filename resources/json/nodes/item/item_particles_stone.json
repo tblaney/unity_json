@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_particles",
+    "is_prefab": true,
+    "prefab_name": "1039_item_particles_stone",
+    "actors": {},
+    "children": {
+        "item_particles_stone_01": {},
+        "item_particles_stone_02": {},
+        "item_particles_stone_03": {}
+    }
+}

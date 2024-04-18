@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "970_item_crop_sunflower",
+    "actors": {},
+    "children": {
+        "item_crop_flower_sunflower_01": {},
+        "item_crop_flower_sunflower_02": {}
+    }
+}

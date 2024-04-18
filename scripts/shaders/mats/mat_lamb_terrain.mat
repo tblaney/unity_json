@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mat_lamb_terrain
+  m_Shader: {fileID: 4800000, guid: c09f90164ad5da04ebcdb83a1c4266d0, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexSide:
+        m_Texture: {fileID: 2800000, guid: 02d5665fc7aa7f8409d48e38474bd022, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 4bbb97498a87a764485df997391626c7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SnowTex:
+        m_Texture: {fileID: 2800000, guid: 9b559b07872296f45bc5490e5f959dd6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _NoiseScale: 0.1
+    - _NoiseWeight: 0.1
+    - _Scale: 0.89
+    - _ShadowStrength: 0.5
+    - _SideScale: 1
+    - _SnowPathBlending: 2
+    - _SnowPathStrength: 2
+    - _SnowStart: 100
+    - _SnowTextureScale: 0.3
+    - _Steps: 10
+    - _TopSpread: 0.388
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowColor: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
+    - _SnowColor: {r: 0.6933962, g: 0.81844246, b: 1, a: 1}
+    - _SnowPathColorIn: {r: 0.26192597, g: 0.30818915, b: 0.509434, a: 1}
+    - _SnowPathColorOut: {r: 0.26099145, g: 0.2999866, b: 0.6509434, a: 1}
+  m_BuildTextureBags: []

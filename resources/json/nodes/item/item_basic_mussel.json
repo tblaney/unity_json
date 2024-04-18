@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "719_item_basic_mussel",
+    "actors": {},
+    "children": {
+        "item_fish_mussel_bottom": {},
+        "item_fish_mussel_top": {}
+    }
+}

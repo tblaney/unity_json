@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "242_item_cooking_dish_o'_the_sea",
+    "actors": {},
+    "children": {}
+}

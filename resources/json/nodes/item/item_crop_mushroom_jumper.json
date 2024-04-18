@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "960_item_crop_mushroom_jumper",
+    "actors": {},
+    "children": {
+        "item_crop_mushroom_jumper_01": {},
+        "item_crop_mushroom_jumper_02": {}
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "958_item_crop_pineapple",
+    "actors": {},
+    "children": {
+        "item_crop_pineapple_fruit": {}
+    }
+}

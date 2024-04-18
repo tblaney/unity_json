@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "55_item_clothing_drawstring_backpack",
+    "actors": {},
+    "children": {
+        "item_clothing_drawstring_backpack_mannequin": {}
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "814_item_basic_squid_ink",
+    "actors": {},
+    "children": {
+        "item_basic_squid_ink_vial": {}
+    }
+}

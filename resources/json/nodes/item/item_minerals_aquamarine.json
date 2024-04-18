@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_minerals",
+    "is_prefab": true,
+    "prefab_name": "62_item_minerals_aquamarine",
+    "actors": {},
+    "children": {}
+}

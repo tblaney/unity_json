@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "58_item_clothing_hat_toque_winter",
+    "actors": {},
+    "children": {
+        "item_clothing_hat_toque_winter_mannequin": {}
+    }
+}

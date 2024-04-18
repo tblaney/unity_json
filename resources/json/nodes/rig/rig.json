@@ -1,0 +1,12 @@
+{
+    "name": "rig",
+    "actors":
+    { 
+        "motion_rig_actor": {
+        }
+    },
+    "children":
+    {
+        
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "938_item_crop_beetroot",
+    "actors": {},
+    "children": {}
+}

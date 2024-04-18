@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "621_item_crafting_quality_sprinkler",
+    "actors": {},
+    "children": {}
+}

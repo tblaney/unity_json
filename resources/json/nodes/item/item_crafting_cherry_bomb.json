@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "286_item_crafting_cherry_bomb",
+    "actors": {},
+    "children": {}
+}

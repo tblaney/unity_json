@@ -1,0 +1,69 @@
+{
+    "name": "rig_chr",
+    "inherit_from": "rig",
+    "actors":
+    { 
+    },
+    "children":
+    {
+        "root": {
+            "inherit_from": "rig_bone",
+            "children": {
+                "rotator_torso": {
+                    "inherit_from": "rig_bone",
+                    "children": {
+                        "positional_torso": {
+                            "inherit_from": "rig_bone",
+                            "children":
+                            {
+                                "rotator_head": {
+                                    "inherit_from": "rig_bone",
+                                    "actors": {
+                                        "point": {
+                                            "position": [0,0,0],
+                                            "rotation": [1,0,0,0],
+                                            "scale": [1,1,1]
+                                        }
+                                    }
+                                },
+                                "positional_arms": {
+                                    "rotator_arms_center": {
+                                        "inherit_from": "rig_bone",
+                                        "actors": {
+                                            "point": {
+                                                "position": [0,0,0],
+                                                "rotation": [1,0,0,0],
+                                                "scale": [1,1,1]
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "actors": {
+                                "point": {
+                                    "position": [0,0,0],
+                                    "rotation": [1,0,0,0],
+                                    "scale": [1,1,1]
+                                }
+                            }
+                        }
+                    },
+                    "actors": {
+                        "point": {
+                            "position": [0,0,0],
+                            "rotation": [1,0,0,0],
+                            "scale": [1,1,1]
+                        }
+                    }
+                }
+            },
+            "actors": {
+                "point": {
+                    "position": [0,0,0],
+                    "rotation": [1,0,0,0],
+                    "scale": [1,1,1]
+                }
+            }
+        }
+    }
+}

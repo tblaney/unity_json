@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "600_item_clothing_woolen_gloves",
+    "actors": {},
+    "children": {
+        "item_clothing_woolen_gloves_mannequin": {}
+    }
+}

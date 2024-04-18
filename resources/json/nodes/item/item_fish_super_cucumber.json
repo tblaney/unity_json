@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_fish",
+    "is_prefab": true,
+    "prefab_name": "155_item_fish_super_cucumber",
+    "actors": {},
+    "children": {}
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_deco",
+    "is_prefab": true,
+    "prefab_name": "120_item_deco_prehistoric_tool",
+    "actors": {},
+    "children": {}
+}

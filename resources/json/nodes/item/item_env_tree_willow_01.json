@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "989_item_env_tree_willow_01",
+    "actors": {},
+    "children": {
+        "item_env_tree_willow_01_branches": {},
+        "item_env_tree_willow_01_trunk": {}
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "964_item_crop_grapevine",
+    "actors": {},
+    "children": {
+        "item_crop_grapevine_prop": {}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_deco",
+    "is_prefab": true,
+    "prefab_name": "758_item_deco_jade_statue",
+    "actors": {},
+    "children": {}
+}

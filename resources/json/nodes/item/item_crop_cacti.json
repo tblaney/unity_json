@@ -1,0 +1,18 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "955_item_crop_cacti",
+    "actors": {},
+    "children": {
+        "item_env_cactus_01": {},
+        "item_env_cactus_02": {},
+        "item_env_cactus_03": {},
+        "item_env_cactus_04": {},
+        "item_env_cactus_05": {},
+        "item_env_cactus_06": {},
+        "item_env_cactus_07": {},
+        "item_env_cactus_08": {},
+        "item_env_cactus_09": {},
+        "item_env_cactus_10": {}
+    }
+}

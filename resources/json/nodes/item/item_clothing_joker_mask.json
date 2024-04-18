@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "63_item_clothing_joker_mask",
+    "actors": {},
+    "children": {
+        "item_clothing_joker_mask_mannequin": {}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_fish",
+    "is_prefab": true,
+    "prefab_name": "708_item_fish_halibut",
+    "actors": {},
+    "children": {}
+}

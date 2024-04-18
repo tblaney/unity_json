@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_quest",
+    "is_prefab": true,
+    "prefab_name": "776_item_quest_ancient_artifact",
+    "actors": {},
+    "children": {}
+}

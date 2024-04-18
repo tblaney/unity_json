@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "348_item_basic_wine",
+    "actors": {},
+    "children": {}
+}

@@ -1,0 +1,16 @@
+{
+    "is_prefab": true,
+    "actors":
+    { 
+        "point": {
+
+        },
+        "item_actor": {
+            
+        }
+    },
+    "children":
+    {
+        
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_deco",
+    "is_prefab": true,
+    "prefab_name": "759_item_deco_lantern",
+    "actors": {},
+    "children": {
+        "item_deco_lantern_glass": {}
+    }
+}

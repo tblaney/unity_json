@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "841_item_crafting_stone_path",
+    "actors": {},
+    "children": {
+        "item_crafting_stone_path_01": {},
+        "item_crafting_stone_path_02": {}
+    }
+}

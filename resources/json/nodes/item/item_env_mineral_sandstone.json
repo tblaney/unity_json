@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "1014_item_env_mineral_sandstone",
+    "actors": {},
+    "children": {
+        "item_env_mineral_sandstone_01": {},
+        "item_env_mineral_sandstone_02": {},
+        "item_env_mineral_sandstone_03": {}
+    }
+}

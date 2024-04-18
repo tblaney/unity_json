@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "57_item_clothing_flat_hat",
+    "actors": {},
+    "children": {
+        "item_clothing_flat_hat_mannequin": {}
+    }
+}

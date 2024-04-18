@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "54_item_clothing_dark_poncho",
+    "actors": {},
+    "children": {
+        "item_clothing_dark_poncho_mannequin": {}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "660_item_basic_snack_chomp_bar",
+    "actors": {},
+    "children": {}
+}

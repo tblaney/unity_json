@@ -1,0 +1,12 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "1011_item_env_flower_rose_bush",
+    "actors": {},
+    "children": {
+        "item_env_flower_bush_rose_blue": {},
+        "item_env_flower_bush_rose_fairy": {},
+        "item_env_flower_bush_rose_outcast": {},
+        "item_env_flower_bush_rose_red": {}
+    }
+}

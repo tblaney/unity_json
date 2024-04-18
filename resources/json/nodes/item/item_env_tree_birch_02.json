@@ -1,0 +1,10 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "1026_item_env_tree_birch_02",
+    "actors": {},
+    "children": {
+        "item_env_tree_birch_02_broken": {},
+        "item_env_tree_birch_02_m": {}
+    }
+}

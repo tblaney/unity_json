@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_crafting",
+    "is_prefab": true,
+    "prefab_name": "752_item_crafting_well",
+    "actors": {},
+    "children": {
+        "item_crafting_well_spinner": {}
+    }
+}

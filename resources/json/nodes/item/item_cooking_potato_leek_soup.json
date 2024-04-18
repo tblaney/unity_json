@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_cooking",
+    "is_prefab": true,
+    "prefab_name": "650_item_cooking_potato_leek_soup",
+    "actors": {},
+    "children": {}
+}

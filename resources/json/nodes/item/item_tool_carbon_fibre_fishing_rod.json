@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_tool",
+    "is_prefab": true,
+    "prefab_name": "777_item_tool_carbon_fibre_fishing_rod",
+    "actors": {},
+    "children": {}
+}

@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_crop",
+    "is_prefab": true,
+    "prefab_name": "965_item_crop_wheat",
+    "actors": {},
+    "children": {
+        "item_env_plant_wheat_01": {},
+        "item_env_plant_wheat_02": {},
+        "item_env_plant_wheat_03": {}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "256_item_basic_tomato",
+    "actors": {},
+    "children": {}
+}

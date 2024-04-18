@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "1006_item_env_mineral_radioactive",
+    "actors": {},
+    "children": {
+        "item_env_mineral_radioactive_l": {},
+        "item_env_mineral_radioactive_ore": {},
+        "item_env_mineral_radioactive_s": {}
+    }
+}

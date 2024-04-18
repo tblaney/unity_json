@@ -1,0 +1,9 @@
+{
+    "inherit_from": "item_clothing",
+    "is_prefab": true,
+    "prefab_name": "598_item_clothing_winter_tunic",
+    "actors": {},
+    "children": {
+        "item_clothing_winter_tunic_mannequin": {}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_basic",
+    "is_prefab": true,
+    "prefab_name": "277_item_basic_wilted_bouquet",
+    "actors": {},
+    "children": {}
+}

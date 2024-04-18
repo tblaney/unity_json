@@ -1,0 +1,11 @@
+{
+    "inherit_from": "item_env",
+    "is_prefab": true,
+    "prefab_name": "995_item_env_mineral_gold",
+    "actors": {},
+    "children": {
+        "item_env_mineral_gold_l": {},
+        "item_env_mineral_gold_ore": {},
+        "item_env_mineral_gold_s": {}
+    }
+}

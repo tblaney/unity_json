@@ -1,0 +1,7 @@
+{
+    "inherit_from": "item_seeds",
+    "is_prefab": true,
+    "prefab_name": "770_item_seeds_mixed_seeds",
+    "actors": {},
+    "children": {}
+}
