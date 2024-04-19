@@ -15,3 +15,5 @@ The fields that can (not mandatory) be filled within a node json are:
 * "children" (list): This field is how you setup child gameobjects. You can basically add any type of field mentioned above within each child node and it will function appropriately. If you just want to link another json node, use the "inherit_from" field.
 
 Another useful and commonly used script within the node system is Map.cs. A Map is essentially a generalized dictionary, capable of storing a lot of unique value types and able to read/write directly to a json file. This is often used instead of direct variables, but you should be careful to not overuse this script as it will cause performance issues with a huge amount of entires.
+
+There are lots of other useful scripts in this repository for in-game functionality, but I will not review them here.
