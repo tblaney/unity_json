@@ -1,0 +1,219 @@
+{
+    "actors": {
+        "point_layout": {
+            "width": 800.0,
+            "height": 60.0,
+            "pivot": [0.5,0.5],
+            "anchor": [0.5,0.5]
+        },
+        "layout_horizontal_module": {
+            "alignment": "middle_center",
+            "spacing": 20.0 
+        }
+    },
+    "children": {
+        "text_static": {
+            "inherit_from": "layout_text",
+            "actors": {
+                "point_layout": {
+                    "width": 380.0,
+                    "height": 60.0,
+                    "pivot": [0.5,0.5],
+                    "anchor": [0.5,0.5]
+                },
+                "layout_text_module": {
+                    "text": "Enter Client ID:",
+                    "color": "#000000",
+                    "font_name": "barlow_bold",
+                    "size": 24,
+                    "alignment": "right"  
+                }
+            }
+        },
+        "text_group": {
+            "actors": {
+                "point_layout":{
+                    "width": 380.0,
+                    "height": 40.0,
+                    "pivot": [0.0,0.5],
+                    "anchor": [0.0,0.5]
+                },
+                "layout_horizontal_module": {
+                    "alignment": "middle_left",
+                    "spacing": 10.0,
+                    "paddings": [5,5,0,0]
+                }
+            },
+            "children": {
+                "text_field_year": {
+                    "actors": {
+                        "point_layout":{
+                            "width": 140.0,
+                            "height": 40.0,
+                            "pivot": [0.5,0.5],
+                            "anchor": [0.5,0.5]
+                        },
+                        "layout_image_module":{
+                            "alpha": 1.0,
+                            "raycasts": true,
+                            "image": "layout_button_dark",
+                            "sprite": "layout_button_dark"
+                        },
+                        "layout_canvas_group_module": {
+                            "opacity": 0.6
+                        },
+                        "layout_button_module": {
+
+                        },
+                        "layout_operation_fade": {
+                            "name": "hover",
+                            "opacity_in": 1.0,
+                            "opacity_out": 0.6,
+                            "time": 0.2
+                        },
+                        "layout_operation_child_input": {
+                            "name": "click",
+                            "child": "text"
+                        }
+                    },
+                    "children":
+                    {
+                        "text": {
+                            "inherit_from": "layout_input_field",
+                            "actors": {
+                                "point_layout":{
+                                    "width": 120.0,
+                                    "height": 60.0,
+                                    "pivot": [0.5,0.5],
+                                    "anchor": [0.5,0.5]
+                                },
+                                "layout_input_field_module": {
+                                    "placeholder_text": "0000",
+                                    "is_char_limit": true,
+                                    "char_limit": 4,
+                                    "is_game_var": true,
+                                    "game_var": "fitbit:config:base_date_year"
+                                },
+                                "layout_input_field_game_state": {
+                                    "game_variable": "fitbit:config:base_date_year"
+                                }
+                            }
+                        }
+                    }
+                },
+                "text_field_month": {
+                    "actors": {
+                        "point_layout":{
+                            "width": 100.0,
+                            "height": 40.0,
+                            "pivot": [0.5,0.5],
+                            "anchor": [0.5,0.5]
+                        },
+                        "layout_image_module":{
+                            "alpha": 1.0,
+                            "raycasts": true,
+                            "image": "layout_button_dark",
+                            "sprite": "layout_button_dark"
+                        },
+                        "layout_canvas_group_module": {
+                            "opacity": 0.6
+                        },
+                        "layout_button_module": {
+
+                        },
+                        "layout_operation_fade": {
+                            "name": "hover",
+                            "opacity_in": 1.0,
+                            "opacity_out": 0.6,
+                            "time": 0.2
+                        },
+                        "layout_operation_child_input": {
+                            "name": "click",
+                            "child": "text"
+                        }
+                    },
+                    "children":
+                    {
+                        "text": {
+                            "inherit_from": "layout_input_field",
+                            "actors": {
+                                "point_layout":{
+                                    "width": 80.0,
+                                    "height": 60.0,
+                                    "pivot": [0.5,0.5],
+                                    "anchor": [0.5,0.5]
+                                },
+                                "layout_input_field_module": {
+                                    "placeholder_text": "00",
+                                    "is_char_limit": true,
+                                    "char_limit": 2,
+                                    "is_game_var": true,
+                                    "game_var": "fitbit:config:base_date_month"
+                                },
+                                "layout_input_field_game_state": {
+                                    "game_variable": "fitbit:config:base_date_month"
+                                }
+                            }
+                        }
+                    }
+                },
+                "text_field_day": {
+                    "actors": {
+                        "point_layout":{
+                            "width": 100.0,
+                            "height": 40.0,
+                            "pivot": [0.5,0.5],
+                            "anchor": [0.5,0.5]
+                        },
+                        "layout_image_module":{
+                            "alpha": 1.0,
+                            "raycasts": true,
+                            "image": "layout_button_dark",
+                            "sprite": "layout_button_dark"
+                        },
+                        "layout_canvas_group_module": {
+                            "opacity": 0.6
+                        },
+                        "layout_button_module": {
+
+                        },
+                        "layout_operation_fade": {
+                            "name": "hover",
+                            "opacity_in": 1.0,
+                            "opacity_out": 0.6,
+                            "time": 0.2
+                        },
+                        "layout_operation_child_input": {
+                            "name": "click",
+                            "child": "text"
+                        }
+                    },
+                    "children":
+                    {
+                        "text": {
+                            "inherit_from": "layout_input_field",
+                            "actors": {
+                                "point_layout":{
+                                    "width": 80.0,
+                                    "height": 60.0,
+                                    "pivot": [0.5,0.5],
+                                    "anchor": [0.5,0.5]
+                                },
+                                "layout_input_field_module": {
+                                    "placeholder_text": "00",
+                                    "is_char_limit": true,
+                                    "char_limit": 2,
+                                    "is_game_var": true,
+                                    "game_var": "fitbit:config:base_date_day"
+                                },
+                                "layout_input_field_game_state": {
+                                    "game_variable": "fitbit:config:base_date_day"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

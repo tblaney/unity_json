@@ -1,0 +1,28 @@
+{
+    "inherit_from": "layout_entry_text",
+    "children": {
+        "text_static": {
+            "actors": {
+                "layout_text_module": {
+                    "text": "Enter Scope:"
+                }
+            }
+        },
+        "text_field": {
+            "children": {
+                "text": {
+                    "actors": {
+                        "layout_input_field_module": {
+                            "text": "activity profile sleep",
+                            "is_game_var": true,
+                            "game_var": "fitbit:config:scope"
+                        },
+                        "layout_input_field_game_state": {
+                            "game_variable": "fitbit:config:scope"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

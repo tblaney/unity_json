@@ -1,0 +1,15 @@
+{
+    "is_prefab": true,
+    "prefab_name": "world_main",
+    "children": {
+        "plane": {
+            "layer": 6,
+            "actors": {
+                "point": {
+                    "position": [50.0,10.0,50.0],
+                    "scale": [50.0,1.0,50.0]
+                }
+            }
+        }
+    }
+}

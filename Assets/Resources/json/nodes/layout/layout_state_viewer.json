@@ -1,0 +1,75 @@
+{
+    "actors": {
+        "point_layout": {
+            "position": [-100.0, -20.0],
+            "width": 200.0,
+            "height": 1040.0,
+            "anchor": [1.0, 1.0],
+            "pivot": [1.0, 1.0]
+        },
+        "layout_image_module":{
+            "alpha": 1.0,
+            "image": "layout_button_dark",
+            "sprite": "layout_button_dark"
+        },
+        "layout_vertical_module": {
+            "alignment": "upper_right",
+            "paddings": [10,10,10,10],
+            "spacing": 10.0
+        },
+        "layout_content_fitter_module": {
+
+        }
+    },
+    "children": {
+        "game_state_step_01": {
+            "inherit_from": "layout_button_game_state"
+        },
+        "game_state_step_02": {
+            "inherit_from": "layout_button_game_state",
+            "actors": {
+                "layout_operation_tooltip_text": {
+                    "text": "Generate access & refresh tokens"
+                },
+                "ability_state_operation": {
+                    "state": "step_02"
+                },
+                "layout_operation_game_state": {
+                    "game_state": "step_02"
+                }
+            },
+            "children": {
+                "text": {
+                    "actors": {
+                        "layout_text_module": {
+                            "text": "STEP 02"
+                        }
+                    }
+                }
+            }
+        },
+        "game_state_step_03": {
+            "inherit_from": "layout_button_game_state",
+            "actors": {
+                "layout_operation_tooltip_text": {
+                    "text": "Generate & save data to disk"
+                },
+                "ability_state_operation": {
+                    "state": "step_03"
+                },
+                "layout_operation_game_state": {
+                    "game_state": "step_03"
+                }
+            },
+            "children": {
+                "text": {
+                    "actors": {
+                        "layout_text_module": {
+                            "text": "STEP 03"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

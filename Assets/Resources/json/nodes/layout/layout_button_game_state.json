@@ -1,0 +1,75 @@
+{
+    "inherit_from": "layout_text_image",
+    "actors": {
+        "point_layout": {
+            "width": 100.0,
+            "height": 80.0,
+            "pivot": [1.0,0.5],
+            "anchor": [1.0,0.5]
+        },
+        "layout_image_module":{
+            "alpha": 1.0,
+            "raycasts": true,
+            "color": "#ffffff",
+            "image": "layout_button_light",
+            "sprite": "layout_button_light"
+        },
+        "layout_canvas_group_module": {
+            "opacity": 0.6
+        },
+        "layout_button_module": {
+            "is_clickable": false
+        },
+        "layout_operation_fade": {
+            "name": "hover",
+            "opacity_in": 1.0,
+            "opacity_out": 0.6,
+            "time": 0.2
+        },
+        "layout_operation_tooltip_text": {
+            "name": "hover",
+            "text": "Authorize Fitbit account"
+        },
+        "abilities_state": {
+        },
+        "ability_idle": {
+            "name": "layout_idle"
+        },
+        "ability_state_operation": {
+            "name": "state_begin",
+            "priority": 1,
+            "is_deactivate": false,
+            "state": "step_01",
+            "operation_name": "color"
+        },
+        "layout_operation_image_color": {
+            "name": "color",
+            "time": 0.2,
+            "color_in":"#a2d2ff",
+            "color_out":"#ffffff"
+        },
+        "layout_operation_game_state": {
+            "name": "click",
+            "game_state": "step_01"
+        }
+    },
+    "children": {
+        "text": {
+            "actors": {
+                "point_layout":{
+                    "width": 100.0,
+                    "height": 80.0,
+                    "pivot": [0.5,0.5],
+                    "anchor": [0.5,0.5]
+                },
+                "layout_text_module": {
+                    "font_name": "barlow_bold",
+                    "text": "STEP 01",
+                    "size": 22,
+                    "color": "#000000",
+                    "alignment": "center"
+                }
+            }
+        }
+    }
+}

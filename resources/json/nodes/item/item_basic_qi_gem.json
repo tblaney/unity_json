@@ -1,7 +1,0 @@
-{
-    "inherit_from": "item_basic",
-    "is_prefab": true,
-    "prefab_name": "858_item_basic_qi_gem",
-    "actors": {},
-    "children": {}
-}

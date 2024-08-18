@@ -1,0 +1,64 @@
+{
+    "actors": {
+        "point_layout": {
+            "width": 300.0,
+            "height": 60.0,
+            "pivot": [0.0, 0.0],
+            "anchor": [0.0, 0.0]
+        }
+    },
+    "children": {
+        "button": {
+            "inherit_from": "layout_text_image",
+            "actors": {
+                "point_layout": {
+                    "width": 300.0,
+                    "height": 60.0,
+                    "pivot": [0.5,0.0],
+                    "anchor": [0.5,0.0]
+                },
+                "layout_image_module":{
+                    "raycasts": true
+                },
+                "layout_button_module": {
+                    "is_clickable": false
+                },
+                "layout_operation_tooltip_text": {
+                    "name": "hover",
+                    "text": "Select codes save file"
+                },
+                "layout_canvas_group_module": {
+                    "opacity": 0.4
+                },
+                "layout_operation_fade": {
+                    "name": "hover",
+                    "opacity_in": 1.0,
+                    "opacity_out": 0.4,
+                    "time": 0.2
+                },
+                "layout_operation_file_browser_codes": {
+                    "name":"click"
+                }
+            },
+            "children": {
+                "text": {
+                    "actors": {
+                        "point_layout": {
+                            "position": [0.0, 0.0],
+                            "width": 300.0,
+                            "height": 60.0,
+                            "pivot": [0.5,0.5],
+                            "anchor": [0.5,0.5]
+                        },
+                        "layout_text_module": {
+                            "text": "Load codes from file",
+                            "size": 20,
+                            "alignment": "center",
+                            "is_auto_size": false
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

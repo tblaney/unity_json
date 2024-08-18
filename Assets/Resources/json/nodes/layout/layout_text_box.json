@@ -1,0 +1,28 @@
+{
+    "inherit_from": "layout_text_image",
+    "actors":
+    { 
+        "layout_text_box":{
+                
+        },
+        "layout_vertical_module": {
+            "child_control_width": true,
+            "child_control_height": true,
+            "child_scale_width": true,
+            "child_scale_height": true,
+            "paddings": [20,20,0,0]
+        },
+        "layout_content_fitter_module": {
+
+        }
+    },
+    "children": {
+        "text": {
+            "actors": {
+                "layout_text_module":{
+                    "is_auto_size": false
+                }
+            }
+        }
+    }
+}

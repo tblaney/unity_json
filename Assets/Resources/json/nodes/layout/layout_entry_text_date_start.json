@@ -1,0 +1,25 @@
+{
+    "inherit_from": "layout_entry_text_date",
+    "children": {
+        "text_static": {
+            "actors": {
+                "layout_text_module": {
+                    "text": "Enter Start Date:"
+                }
+            }
+        },
+        "text_group": {
+            "children": {
+                "text_field_year": {
+                    "children": {
+                        "text": {
+                            "actors": {
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

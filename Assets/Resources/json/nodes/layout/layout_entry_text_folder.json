@@ -1,0 +1,133 @@
+{
+    "actors": {
+        "point_layout": {
+            "width": 800.0,
+            "height": 60.0,
+            "pivot": [0.5,0.5],
+            "anchor": [0.5,0.5]
+        },
+        "layout_horizontal_module": {
+            "alignment": "middle_center",
+            "spacing": 20.0 
+        }
+    },
+    "children": {
+        "text_static": {
+            "inherit_from": "layout_text",
+            "actors": {
+                "point_layout": {
+                    "width": 380.0,
+                    "height": 60.0,
+                    "pivot": [0.5,0.5],
+                    "anchor": [0.5,0.5]
+                },
+                "layout_text_module": {
+                    "text": "Enter Client ID:",
+                    "color": "#000000",
+                    "font_name": "barlow_bold",
+                    "size": 24,
+                    "alignment": "right"  
+                }
+            }
+        },
+        "text_group": {
+            "actors": {
+                "point_layout":{
+                    "width": 380.0,
+                    "height": 40.0,
+                    "pivot": [0.5,0.5],
+                    "anchor": [0.5,0.5]
+                },
+                "layout_horizontal_module": {
+                    "alignment": "middle_left",
+                    "spacing": 10.0,
+                    "paddings": [5,5,0,0]
+                }
+            },
+            "children": {
+                "text_field": {
+                    "actors": {
+                        "point_layout":{
+                            "width": 325.0,
+                            "height": 40.0,
+                            "pivot": [0.5,0.5],
+                            "anchor": [0.5,0.5]
+                        },
+                        "layout_image_module":{
+                            "alpha": 1.0,
+                            "raycasts": true,
+                            "image": "layout_button_dark",
+                            "sprite": "layout_button_dark"
+                        },
+                        "layout_canvas_group_module": {
+                            "opacity": 0.6
+                        },
+                        "layout_button_module": {
+
+                        },
+                        "layout_operation_fade": {
+                            "name": "hover",
+                            "opacity_in": 1.0,
+                            "opacity_out": 0.6,
+                            "time": 0.2
+                        },
+                        "layout_operation_child_input": {
+                            "name": "click",
+                            "child": "text"
+                        }
+                    },
+                    "children":
+                    {
+                        "text": {
+                            "inherit_from": "layout_input_field",
+                            "actors": {
+                                "point_layout":{
+                                    "width": 305.0,
+                                    "height": 60.0,
+                                    "pivot": [0.5,0.5],
+                                    "anchor": [0.5,0.5]
+                                }
+                            }
+                        }
+                    }
+                },
+                "folder": {
+                    "actors": {
+                        "point_layout":{
+                            "width": 45.0,
+                            "height": 40.0,
+                            "pivot": [0.5,0.5],
+                            "anchor": [0.5,0.5]
+                        }
+                    },
+                    "children":
+                    {
+                        "button": {
+                            "inherit_from": "layout_button_image",
+                            "actors": {
+                                "point_layout": {
+                                    "width": 32.0,
+                                    "height": 32.0
+                                },
+                                "layout_image_module":{
+                                    "raycasts": true,
+                                    "image": "layout_folder",
+                                    "sprite": "layout_folder",
+                                    "type": "simple",
+                                    "color": "#ffffff"
+                                },
+                                "layout_button_module":{
+                                    "is_clickable": false
+                                },
+                                "layout_operation_file_browser": {
+                                    "name":"click",
+                                    "game_var":"fitbit:config:folder_path_data"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

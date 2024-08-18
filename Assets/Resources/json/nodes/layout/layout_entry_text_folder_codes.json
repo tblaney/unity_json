@@ -1,0 +1,46 @@
+{
+    "inherit_from": "layout_entry_text_folder",
+    "children": {
+        "text_static": {
+            "actors": {
+                "layout_text_module": {
+                    "text": "Select Save Folder:"
+                }
+            }
+        },
+        "text_group": {
+            "children": {
+                "text_field": {
+                    "children": {
+                        "text": {
+                            "actors": {
+                                "layout_input_field_module": {
+                                    "text": "",
+                                    "is_game_var": true,
+                                    "game_var": "fitbit:config:folder_path_config"
+                                },
+                                "layout_input_field_game_state": {
+                                    "game_variable": "fitbit:config:folder_path_config"
+                                },
+                                "layout_input_field_game_var": {
+                                    "game_var": "fitbit:config:folder_path_config"
+                                }
+                            }
+                        }
+                    }
+                },
+                "folder": {
+                    "children": {
+                        "button": {
+                            "actors": {
+                                "layout_operation_file_browser": {
+                                    "game_var":"fitbit:config:folder_path_config"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

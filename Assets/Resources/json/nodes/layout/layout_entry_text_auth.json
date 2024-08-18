@@ -1,0 +1,34 @@
+{
+    "inherit_from": "layout_entry_text",
+    "children": {
+        "text_static": {
+            "actors": {
+                "layout_text_module": {
+                    "text": "Enter Authorization Code:"
+                }
+            }
+        },
+        "text_field": {
+            "actors": {
+                "layout_operation_tooltip_text": {
+                    "name": "hover",
+                    "text": "Enter URL from previous Step (IE https://jwsoarlab.serveo.net/?code=...)"
+                }
+            },
+            "children": {
+                "text": {
+                    "actors": {
+                        "layout_input_field_module": {
+                            "text": "",
+                            "is_game_var": true,
+                            "game_var": "fitbit:config:auth_code"
+                        },
+                        "layout_input_field_game_state": {
+                            "game_variable": "fitbit:config:auth_code"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

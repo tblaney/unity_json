@@ -1,0 +1,31 @@
+{
+    "is_prefab": false,
+    "inherit_from": "",
+    "actors": { 
+        
+    },
+    "children": {
+        "world_main": {
+            "inherit_from": "world_main_plane"
+        },
+        "camera_overworld": {
+            "inherit_from": "camera_overworld"
+        },
+        "layout_canvas_overworld": {
+            "inherit_from": "layout_canvas_overworld"
+        },
+        "input_manager": {
+            "inherit_from": "input_manager"
+        },
+        "fitbit": {
+            "inherit_from": "fitbit_main"
+        },
+        "scene_loader": {
+            "inherit_from": "scene_loader_overworld",
+            "actors": {
+            },
+            "children": {
+            }
+        }   
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "inherit_from": "layout_canvas_group",
+    "actors": {
+        "abilities_state": {
+        },
+        "ability_idle": {
+            "name": "layout_idle"
+        },
+        "ability_state_operation": {
+            "name": "state_begin",
+            "priority": 1,
+            "state": "step_01",
+            "operation_name": "fade"
+        },
+        "layout_operation_fade": {
+            "name": "fade",
+            "opacity_in": 1.0,
+            "opacity_out": 0.0,
+            "time": 1.0
+        }
+    },
+    "children": {
+        "group": {
+            "actors": {
+                "point_layout": {
+                    "width": 800.0,
+                    "height": 800.0,
+                    "pivot": [0.5,0.5],
+                    "anchor": [0.5,0.5]
+                },
+                "layout_vertical_module": {
+                    "alignment": "upper_center"
+                }
+            },
+            "children": {
+                "heading": {
+                    "inherit_from": "layout_heading_text"
+                },
+                "text_input_client_id": {
+                    "inherit_from": "layout_entry_text_client",
+                    "children": {
+                        "text_field": {
+                            "actors": {
+                                "layout_button_module": {
+                                    "index": 0
+                                }
+                            }
+                        }
+                    }
+                },
+                "text_input_secret_code": {
+                    "inherit_from": "layout_entry_text_secret",
+                    "children": {
+                        "text_field": {
+                            "actors": {
+                                "layout_button_module": {
+                                    "index": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "text_input_redirect_url": {
+                    "inherit_from": "layout_entry_text_redirect",
+                    "children": {
+                        "text_field": {
+                            "actors": {
+                                "layout_button_module": {
+                                    "index": 2
+                                }
+                            }
+                        }
+                    }
+                },
+                "text_input_scope": {
+                    "inherit_from": "layout_entry_text_scope",
+                    "children": {
+                        "text_field": {
+                            "actors": {
+                                "layout_button_module": {
+                                    "index": 3
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

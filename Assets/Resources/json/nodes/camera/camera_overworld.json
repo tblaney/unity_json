@@ -1,0 +1,33 @@
+{
+    "children":
+    {
+        "camera": {
+            "actors": {
+                "point": {
+
+                },
+                "camera_module": {
+                    "is_main": true,
+                    "mode": "orthographic",
+                    "orthographic_size": 8.0,
+                    "fov": 30.0
+                }
+            },
+            "children": {
+            }
+        },
+        "camera_target": {
+            "actors":
+            { 
+                "point": {
+                },
+                "abilities_ticker": {
+
+                },
+                "ability_idle": {
+                    "name": "camera_idle"
+                }
+            }
+        }
+    }
+}

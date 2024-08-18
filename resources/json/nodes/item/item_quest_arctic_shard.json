@@ -1,7 +1,0 @@
-{
-    "inherit_from": "item_quest",
-    "is_prefab": true,
-    "prefab_name": "868_item_quest_arctic_shard",
-    "actors": {},
-    "children": {}
-}

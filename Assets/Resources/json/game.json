@@ -1,0 +1,45 @@
+{
+    "name": "outlandia",
+    "stage_setup": "setup",
+    "stage_start": "overworld",
+    "gravity": -15.0,
+    "fitbit": {
+        "config": {
+            "client_id": "23PQDK",
+            "secret_code": "59c16281a365b16708594757111cf33d",
+            "redirect_url": "https://jwsoarlab.serveo.net",
+            "scope": "activity heartrate location nutrition profile settings sleep social weight oxygen_saturation respiratory_rate temperature electrocardiogram",
+            "auth_code": "316d5546c811204a05d973a6cecc3262202af1f3",
+            "activity": "sleep",
+            "base_date_year": "2024",
+            "base_date_month": "08",
+            "base_date_day": "07",
+            "end_date_year": "2024",
+            "end_date_month": "08",
+            "end_date_day": "09"
+        },
+        "tokens": {
+            "access": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM1BORkQiLCJzdWIiOiJDNjU5VDMiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyYWN0IHJwcm8gcnNsZSIsImV4cCI6MTcyMjU2OTk4NSwiaWF0IjoxNzIyNTQxMTg1fQ.jhrSK_op-eoxtaknduvSltbgWqYme4IUlo5_xq9L7IU",
+            "refresh": "294492360698497be570fb76152b170b0940693d868fd6f39bf977a9fc553f9e"
+        }
+    },
+    "activity_options": [
+        "all",
+        "sleep",
+        "activities/steps",
+        "activities/calories",
+        "activities/distance",
+        "activities/floors",
+        "activities/elevation",
+        "activities",
+        "heartrate",
+        "nutrition",
+        "weight",
+        "bodyfat",
+        "breathing_rate",
+        "badges"
+    ],
+    "saves": {
+        "fitbit": "fitbit_config_tokens"
+    }
+}

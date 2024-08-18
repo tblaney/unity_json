@@ -1,0 +1,123 @@
+{
+    "name": "layout_notification",
+    "actors": {
+        "point_layout": {
+            "width": 100.0,
+            "height": 55.0,
+            "pivot": [0.0, 0.0],
+            "anchor": [0.0, 0.0]
+        },
+        "operation_terminate": {
+            "name": "terminate"
+        }
+    },
+    "children": {
+        "group": {
+            "name": "layout_notification",
+            "actors": {
+                "point_layout": {
+                    "position": [0.0,0.0],
+                    "width": 1200.0,
+                    "height": 55.0,
+                    "pivot": [0.0, 0.0],
+                    "anchor": [0.0, 0.0]
+                },
+                "layout_horizontal_module": {
+                    "alignment": "middle_left",
+                    "spacing": 15.0,
+                    "child_scale_width": true
+                },
+                "layout_canvas_group_module": {
+                    "opacity": 1.0
+                },
+                "layout_operation_transformation": {
+                    "name": "remove",
+                    "is_destroy_on_transform": true,
+                    "time": 3.0,
+                    "state_in": {
+                        "width": 1200.0,
+                        "height": 55.0,
+                        "position": [-1000.0,0.0]
+                    },
+                    "state_out": {
+                        "width": 1200.0,
+                        "height": 55.0,
+                        "position": [0.0,0.0]
+                    }
+                },
+                "layout_operation_fade": {
+                    "name": "remove",
+                    "opacity_in": 0.0,
+                    "opacity_out": 1.0,
+                    "time": 3.0
+                },
+                "operation_invoke_parent": {
+                    "name": "terminate"
+                }
+            },
+            "children": {
+                "exit": {
+                    "inherit_from": "layout_button_image",
+                    "actors": {
+                        "point_layout": {
+                            "width": 32.0,
+                            "height": 32.0
+                        },
+                        "layout_image_module":{
+                            "raycasts": true,
+                            "image": "layout_exit",
+                            "sprite": "layout_exit",
+                            "type": "simple",
+                            "color": "#ffffff"
+                        },
+                        "layout_button_module":{
+                            "is_clickable": false
+                        },
+                        "operation_invoke_parent": {
+                            "name":"click",
+                            "name_parent":"remove"
+                        }
+                    }
+                },
+                "text_box": {
+                    "inherit_from": "layout_text_image",
+                    "actors": {
+                        "point_layout": {
+                            "width": 1100.0,
+                            "height": 55.0,
+                            "pivot": [0.0, 0.5],
+                            "anchor": [0.0, 0.5]
+                        },
+                        "layout_image_module": {
+                            "color": "#566f87",
+                            "raycasts": false,
+                            "image": "layout_button_light",
+                            "sprite": "layout_button_light"
+                        }
+                    },
+                    "children": {
+                        "text": {
+                            "actors": {
+                                "point_layout":{
+                                    "position": [25.0,0.0],
+                                    "width": 1050.0,
+                                    "height": 35.0,
+                                    "pivot": [0.0, 0.5],
+                                    "anchor": [0.0, 0.5]
+                                },
+                                "layout_text_module":{
+                                    "font_name": "barlow_regular",
+                                    "text": "",
+                                    "size": 22,
+                                    "color": "#ffffff",
+                                    "alignment": "left",
+                                    "is_auto_size": false
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

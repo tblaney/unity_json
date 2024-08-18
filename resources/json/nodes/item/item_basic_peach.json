@@ -1,7 +1,0 @@
-{
-    "inherit_from": "item_basic",
-    "is_prefab": true,
-    "prefab_name": "636_item_basic_peach",
-    "actors": {},
-    "children": {}
-}
