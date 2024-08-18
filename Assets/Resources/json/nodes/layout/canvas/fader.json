@@ -1,0 +1,54 @@
+{
+    "inherit_from": "layout/canvas",
+    "is_prefab": true,
+    "prefab_name": "canvas_fader",
+    "actors":
+    { 
+        "layout_canvas_module":{
+            "sort_order": 10,
+            "raycasts": false,
+            "interactable": false
+        }
+    },
+    "children":
+    {
+        "fader_group": {
+            "inherit_from": "layout/canvas/group",
+            "actors": {
+                "point_layout": {
+                    "pivot": [0.5, 0.5],
+                    "anchor_min": [0.0, 0.0],
+                    "anchor_max": [1.0, 1.0]
+                },
+                "layout_image_module": {
+                    "color": "#000000"
+                },
+                "layout_operation_fade": {
+                    "name": "fade",
+                    "opacity_in": 1.0,
+                    "opacity_out": 0.0,
+                    "time": 1.0
+                },
+                "abilities_context": {
+                },
+                "ability_idle": {
+                    "name": "ability_idle"
+                },
+                "ability_context_operation": {
+                    "name": "ability_loading_context",
+                    "priority": 1,
+                    "context": "loading",
+                    "operation_name": "fade"
+                },
+                "operation_invoke_child": {
+                    "childs": [
+                        "text"
+                    ]
+                }
+            },
+            "children": {
+                
+            }
+        }
+    }
+}

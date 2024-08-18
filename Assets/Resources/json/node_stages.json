@@ -1,12 +1,11 @@
 {
     "setup": {
         "node":"stage_setup",
+        "file": "stage/setup",
         "is_persistent":true
     },
-    "main_menu": {
-        "node":"stage_main_menu"
-    },
     "overworld": {
-        "node":"stage_overworld"
+        "node":"stage_overworld",
+        "file": "stage/overworld"
     }
 }

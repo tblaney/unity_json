@@ -97,7 +97,7 @@ namespace snorri
         {
             Destroy(this.gameObject);
         }
-        public bool FindChild(string name, out GameObject obj)
+        public bool FindChildGameObject(string name, out GameObject obj)
         {
             obj = null;
             foreach (Transform child in this.transform)

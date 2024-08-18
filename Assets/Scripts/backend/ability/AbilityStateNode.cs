@@ -14,7 +14,7 @@ namespace snorri
             isParent = Vars.Get<bool>("is_parent", false);
             stateName = Vars.Get<string>("state", "");
 
-            parentNode = NODE.Tree.Get<Node>(this.Node.Parent, null);
+            parentNode = Node.Parent;
         }
         public override bool CanRun() {
             if (isParent && parentNode != null) {

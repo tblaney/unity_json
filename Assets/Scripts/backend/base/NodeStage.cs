@@ -9,6 +9,7 @@ namespace snorri
         public Map Vars {get; set;}
 
         public string NodeName { get {return Vars.Get<string>("node", ""); } }
+        public string NodeFile { get {return Vars.Get<string>("file", ""); } }
         public bool IsPersisitent { get {return Vars.Get<bool>("is_persistent", false); } }
 
         public NodeStage(Map vars)
@@ -18,17 +19,15 @@ namespace snorri
 
         public void Build()
         {
-            LOG.Console("node stage build! " + NodeName);
+            LOG.Console("node stage build! " + NodeName + ", " + NodeFile);
 
             Vars.Log(); 
 
             Origin = new Node(
-                nodeName:NodeName, 
-                isLinkToTree:true
+                nodeName:NodeName,
+                resourceFile:NodeFile 
             );
             Origin.Build();
-
-            NODE.Tree.Log();
         }
         public void Terminate()
         {

@@ -1,0 +1,21 @@
+{
+    "is_prefab": false,
+    "actors": { 
+        
+    },
+    "children": {
+        "camera_overworld": {
+            "inherit_from": "camera/overworld"
+        },
+        "input_manager": {
+            "inherit_from": "input/manager"
+        },
+        "scene_loader": {
+            "inherit_from": "scene/loader/overworld",
+            "actors": {
+            },
+            "children": {
+            }
+        }   
+    }
+}

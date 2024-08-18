@@ -6,6 +6,12 @@ namespace snorri
     {
         public static Map Vars {get; set;}
 
+        public static float TimeDayLength {
+            get {
+                return Vars.Get<float>("time_day_length", 360f);
+            }
+        }
+
         public static void Init()
         {
             Vars = Map.FromJson("game");

@@ -19,9 +19,9 @@ namespace snorri
         {
             base.Stop();
 
-            bool hasParent = this.Node.Parent != "";
+            bool hasParent = this.Node.Parent != null;
             if (hasParent) {
-                Node p = NODE.Tree.Get<Node>(this.Node.Parent, null);
+                Node p = this.Node.Parent;
                 if (p != null) {
                     string opName = this.Name;
                     if (Vars.Has("name_parent")) {

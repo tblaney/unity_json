@@ -2,45 +2,42 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Collections;
-
 namespace snorri
 {
     public class Node : IMap, INameable
     {
         public Map Vars {get; set;}
-        public Map VarsSetup {get; set;} // should be discarded on link - its a one time use thing
-
-        public string Name 
-        {
-            get
-            {
+        public Map VarsResource {get; set;} // should be discarded on link - its a one time use thing
+        
+         // -- properties -- //
+        public string Name  {
+            get {
                 return Vars.Get<string>("name", "");
             } 
-            set
-            {   
+            set {   
                 Vars.Set<string>("name", value);
             }
         }
-        public string Parent { 
+        public Node Parent { 
             get {
-                return Vars.Get<string>("parent", "");
+                return Vars.Get<Node>("parent", null);
             }
             set {
-                Vars.Set<string>("parent", value);
+                Vars.Set<Node>("parent", value);
             }
         }
-        public Bag<string> Children { 
+        public Bag<Node> Children { 
             get {
-                Bag<string> bagOfChildren = Vars.Get<Bag<string>>("children", null);
+                Bag<Node> bagOfChildren = Vars.Get<Bag<Node>>("children", null);
                 if (bagOfChildren == null)
                 {
-                    bagOfChildren = new Bag<string>();
-                    Vars.Set<Bag<string>>("children", bagOfChildren);
+                    bagOfChildren = new Bag<Node>();
+                    Vars.Set<Bag<Node>>("children", bagOfChildren);
                 }
                 return bagOfChildren;
             }
             set {
-                Vars.Set<Bag<string>>("children", value);
+                Vars.Set<Bag<Node>>("children", value);
             }
         }
         public NodeEntity Entity { 
@@ -70,8 +67,7 @@ namespace snorri
                 return null;
             }
         }
-        public Transform transform
-        {
+        public Transform transform {
             get {
                 NodeEntity entity = this.Entity;
                 if (entity != null)
@@ -80,22 +76,12 @@ namespace snorri
                 return null;
             }
         }
-        public Body Body
-        {
+        public Body Body {
             get {
                 return Vars.Get<Body>("body", null);
             } 
             set {
                 Vars.Set<Body>("body", value);
-            }
-        }
-        
-        public bool IsLinked { 
-            get {
-                return Vars.Get<bool>("is_linked", false);
-            }
-            set {
-                Vars.Set<bool>("is_linked", value);
             }
         }
         public bool IsBuilt { 
@@ -106,28 +92,23 @@ namespace snorri
                 Vars.Set<bool>("is_built", value);
             }
         }
-        public Bag<IActor> Actors
-        {
+        public Bag<IActor> Actors {
             get {
                 Bag<IActor> bagOfActors = Vars.Get<Bag<IActor>>("actors", null);
-                if (bagOfActors == null)
-                {
+                if (bagOfActors == null) {
                     bagOfActors = new Bag<IActor>();
                     Vars.Set<Bag<IActor>>("actors", bagOfActors);
                 }
                 return bagOfActors;
             }
-            private set
-            {
+            private set {
                 Vars.Set<Bag<IActor>>("actors", value);
             }
         }
-        public Bag<Ticker> Tickers
-        {
+        public Bag<Ticker> Tickers {
             get {
                 Bag<Ticker> bagOfTickers = Vars.Get<Bag<Ticker>>("tickers", null);
-                if (bagOfTickers == null)
-                {
+                if (bagOfTickers == null) {
                     bagOfTickers = new Bag<Ticker>();
                     Vars.Set<Bag<Ticker>>("tickers", bagOfTickers);
                 }
@@ -138,142 +119,71 @@ namespace snorri
             }
         }
         
-        public Node(Map vars)
-        {
-            Vars = vars;
-        }
-        public Node(string nodeName, bool isLinkToTree = false)
-        {
-            // init from just name, so load from json
 
-            // init from json
-            string typeName = nodeName.Split('_')[0];
-            Map m = JSON.GetResourceMap(nodeName, $"nodes/{typeName}");
-            this.VarsSetup = m;
-
-            LOG.Console("new node! " + nodeName);
-            
+        // -- constructors -- //
+        public Node(string nodeName, string resourceFile, Node parentNode = null) {
             Vars = new Map();
 
-            Name = nodeName;
-            // no parent
+            this.Name = nodeName;
 
-            Setup(isLinkToTree);
+            Map m = JSON.GetResourceMap(resourceFile, "nodes");
+            this.VarsResource = m;
 
-            if (isLinkToTree)
-            {
-                // VarsSetup.Log();
-            }
+            if (parentNode != null) this.Parent = parentNode;
+
+            Setup();
         }
-        public Node(string nodeName, string parentNodeName, Map varsSetup, bool isLinkToTree = false)
-        {
-            // init from name, parent, override map
-            this.VarsSetup = varsSetup;
-
+        public Node(string nodeName, Map vars, Node parentNode = null) {
             Vars = new Map();
-            
-            if (parentNodeName != "")
-            {
-                Name = parentNodeName + "." + nodeName;
-                Parent = parentNodeName;
-            } else
-            {
-                Name = nodeName;
-                Parent = "";
-            }
 
-            LOG.Console($"new node! {nodeName}");
+            this.Name = nodeName;
 
-            Setup(isLinkToTree);
+            this.VarsResource = vars;
 
-            if (isLinkToTree)
-            {
-                // VarsSetup.Log();
-            }
+            if (parentNode != null) this.Parent = parentNode;
+
+            Setup();
         }
 
-        void Setup(bool isLinkToTree = false)
-        {
+        // -- setup -- //
+        void Setup() {
             InheritSetup();
-            ChildrenSetup(isLinkToTree);
-            
-            if (isLinkToTree)
-                LinkToTree();
+            ChildrenSetup();
         }
-        void InheritSetup()
-        {
+        void InheritSetup() {
             LOG.Console("node inherit setup: " + this.Name);
-            string inheritName = VarsSetup.Get<string>("inherit_from", "");
-            if (inheritName != "")
-            {
-                Node inheritNode = new Node(inheritName, false);
-                this.InheritFrom(inheritNode);
+            string inheritName = VarsResource.Get<string>("inherit_from", "");
+            if (inheritName != "") {
+                Map m = JSON.GetResourceMap(inheritName, "nodes");
+                m.Sync(this.VarsResource);
+                this.VarsResource = m;
             }   
         }
-        public void InheritFrom(Node otherNode)
-        {
-            otherNode.VarsSetup.Sync(this.VarsSetup, new Bag<string>("inherit_from"));
-            this.VarsSetup = otherNode.VarsSetup;
-
-            // LOG.Console($"node {Name} has been inherited from {otherNode.Name}, with vars:");
-            // this.VarsSetup.Log();
-        }
-        void ChildrenSetup(bool isLinkToTree = false)
-        {
-            Map childMap = VarsSetup.Get<Map>("children", new Map());
-            foreach (string childKey in childMap.Elements.Keys)
-            {
+        void ChildrenSetup() {
+            Map childMap = VarsResource.Get<Map>("children", new Map());
+            foreach (string childKey in childMap.Elements.Keys) {
                 Map childSetupMap = childMap.Get<Map>(childKey, new Map());
 
-                if (this.VarsSetup.Get<bool>("is_pass_layer_on", false))
+                if (this.VarsResource.Get<bool>("is_pass_layer_on", false))
                 {
-                    childSetupMap.Set<int>("layer", this.VarsSetup.Get<int>("layer", 0));
+                    childSetupMap.Set<int>("layer", this.VarsResource.Get<int>("layer", 0));
                     childSetupMap.Set<bool>("is_pass_layer_on", true);
                 }
 
-                string childName = this.Name + "." + childKey;
+                string childName = childKey;
                 
-                Node childNode = null;
-                if (Children.Contains(childName))
-                {
-                    if (isLinkToTree)
-                    {
-                        childNode = NODE.Tree.Get<Node>(childName, null);
-                    } else
-                    {
-                        childNode = new Node(childKey, this.Name, childSetupMap, isLinkToTree);
-                    }
-                    childNode.SyncSetupMap(childSetupMap);
-                } else
-                {
-                    childNode = new Node(childKey, this.Name, childSetupMap, isLinkToTree);
-                    Children.Append(childName);
-                }
+                Node childNode = new Node(childName, childSetupMap, this);
+                Children.Append(childNode);
             } 
         }
-        public void SyncSetupMap(Map newSetupMap)
-        {
-            this.VarsSetup.Sync(newSetupMap);
-        }
-        void LinkToTree()
-        {
-            NODE.Tree.Set<Node>(Name, this);
 
-            IsLinked = true;
-        }
-
-        public Node GetParent() {
-            return NODE.Tree.Get<Node>(this.Parent, null);
-        }
-
-        public void Terminate()
-        {
+        // -- terminate -- //
+        public void Terminate() {
             LOG.Console($"node terminated! {this.Name}");
 
-            if (Parent != "")
+            if (Parent != null)
             {
-                Node parentNode = NODE.Tree.Get<Node>(Parent);
-                parentNode.Children.Remove(this.Name);
+                Parent.Children.Remove(this);
             }
 
             this.Actors = new Bag<IActor>();
@@ -282,93 +192,63 @@ namespace snorri
             // delete children first from tree
             TerminateChildren();
 
-            if (IsLinked)
-            {
-                // clears the Node
-                NODE.Tree.Remove(this.Name);
-            }
-
             if (IsBuilt)
             {
                 Entity.Terminate();
             }
         }
         public void TerminateChildren() {
-            foreach (string child in this.Children)
-            {
-                Node n = NODE.Tree.Get<Node>(child, null);
-                if (n == null)
-                    continue;
-
-                n.Terminate();
+            foreach (Node child in this.Children) {
+                if (child == null) continue;
+                child.Terminate();
             }
         }
 
-        public string GetName()
-        {
-            string[] nameParts = Name.Split('.');
-
-            return nameParts[nameParts.Length - 1];
-        }
-        
-        public void Build()
-        {
-            LOG.Console("node build! " + GetName());
-
-            if (!IsLinked)
-                return;
-
+        // -- build -- //
+        public void Build() {
             if (IsBuilt)
                 return;
             
             NodeEntity entityOut = null;
             GameObject obj = null;
-            bool isPrefab = VarsSetup.Get<bool>("is_prefab", false);
+            bool isPrefab = VarsResource.Get<bool>("is_prefab", false);
             bool isAssignParent = true;
 
             if (isPrefab)
             {
-                string prefabName = VarsSetup.Get<string>("prefab_name", GetName());
-                obj = NODE.NewPrefab(prefabName); 
-                obj.name = GetName();
+                string prefabName = VarsResource.Get<string>("prefab_name", Name);
+                obj = Node.NewPrefab(prefabName); 
+                obj.name = Name;
             } else
             {
-                if (Parent != "")
+                if (Parent != null)
                 {
-                    Node parentNode = NODE.Tree.Get<Node>(Parent, null);
-                    bool hasObj = parentNode.Entity.FindChild(GetName(), out obj);
+                    bool hasObj = Parent.Entity.FindChildGameObject(Name, out obj);
                     if (!hasObj)
                     {
-                        obj = NODE.New(GetName());
+                        obj = Node.New(Name);
                     } else
                     {
                         isAssignParent = false;
                     }
 
-                    obj.layer = VarsSetup.Get<int>("layer", 0);
-
-                    //if (parentNode.VarsSetup.Get<bool>("is_pass_layer_on", false))
-                    //{
-                    //    obj.layer = parentNode.VarsSetup.Get<int>("layer", 0);
-                    //    this.VarsSetup.Set<bool>("is_pass_layer_on", true);
-                    //    this.VarsSetup.Set<int>("layer", obj.layer);
-                    //}
+                    obj.layer = VarsResource.Get<int>("layer", 0);
 
                 } else
                 {
-                    obj = NODE.New(GetName());
+                    obj = Node.New(Name);
 
-                    obj.layer = VarsSetup.Get<int>("layer", 0);
+                    obj.layer = VarsResource.Get<int>("layer", 0);
                 }
             }
             
             PopulateActors(obj);
 
             // entity should be last thing we add
-            if (Parent != "" && isAssignParent)
+            if (Parent != null && isAssignParent)
             {
                 // should set gameobject parent
-                Node parentNode = NODE.Tree.Get<Node>(Parent, null);
+                Node parentNode = this.Parent;
 
                 obj.transform.SetParent(parentNode.Entity.transform);
 
@@ -383,36 +263,80 @@ namespace snorri
 
             IsBuilt = true;
 
-            //Entity.Launch();
-
             BuildChildren();
         }
-        void BuildChildren()
-        {
-            if (!IsLinked)
-                return;
-
-            foreach (string childName in Children)
-            {
-                Node n = NODE.Tree.Get<Node>(childName, null);
+        void BuildChildren() {
+            foreach (Node n in Children) {
                 if (n != null)
                     n.Build();
             }
         }
+        
+        
+        // -- enables -- //
+        public void Enable(bool isEnable) {
+            if (Entity != null) {
+                Entity.gameObject.SetActive(isEnable);
+            }
+
+            LOG.Console("node enabled! " + this.Name + ", value: " + isEnable.ToString());
+
+            if (isEnable) {
+                InformActorsAndChildren(ActorState.Enable);
+            } else {
+                InformActorsAndChildren(ActorState.Disable);
+            }
+        }
+
+        // -- children -- //
+        public bool HasChild(string nodeName) {
+            foreach (Node n in Children) {
+                if (n.Name == nodeName) {
+                    return true;
+                }
+            } return false;
+        }
+        public Node AddChild(string nodeName, Map overrideMap) {
+            if (!HasChild(nodeName))
+            {
+                Node childNode = new Node(nodeName, overrideMap, this);
+
+                if (IsBuilt)
+                    childNode.Build();
+
+                Children.Append(childNode);
+
+                return childNode;
+
+            } else
+            {
+                LOG.Console("tried adding node but one already exists: " + nodeName + ", parent: " + this.Name);
+            }
+            return null;
+        }
+        public bool FindChild(string name, out Node childNode) {
+            childNode = null;
+            foreach (Node n in Children) {
+                if (n.Name == name) {
+                    childNode = n;
+                    return true;
+                }
+            } return false;
+        }
+
+        // -- actors -- //
         void SetupActor(string actorTypeName, Map actorTypeMap, GameObject obj) {
             Type classType = UTIL.GetSnorriType(actorTypeName);
 
             object o = null;
 
-            if (typeof(Module).IsAssignableFrom(classType))
-            {
+            if (typeof(Module).IsAssignableFrom(classType)) {
                 Component component = obj.GetComponent(classType);
                 if (component == null)
                     component = obj.AddComponent(classType);
 
                 o = component as object;
-            } else
-            {
+            } else {
                 LOG.Console($"node create instance! {actorTypeName}");
                 o = UTIL.CreateInstance(classType);
             }
@@ -423,19 +347,16 @@ namespace snorri
 
             this.Actors.Append(a);
 
-            if (o is Ticker ticker)
-            {
+            if (o is Ticker ticker) {
                 this.Tickers.Append(ticker);
             }
         }
-        void PopulateActors(GameObject obj)
-        {
-            Map actorMap = VarsSetup.Get<Map>("actors", new Map());
+        void PopulateActors(GameObject obj) {
+            Map actorMap = VarsResource.Get<Map>("actors", new Map());
 
             SetupDefaultActors(actorMap);
 
-            foreach (string actorTypeName in actorMap.Elements.Keys)
-            {
+            foreach (string actorTypeName in actorMap.Elements.Keys) {
                 Map actorTypeMap = actorMap.Get<Map>(actorTypeName, new Map());
                 
                 if (actorTypeMap.Has("instances")) {    
@@ -450,89 +371,13 @@ namespace snorri
                 SetupActor(actorTypeName, actorTypeMap, obj);
             }
         }
-        void SetupDefaultActors(Map actorMap)
-        {
+        void SetupDefaultActors(Map actorMap) {
             // point check:
-            if (!actorMap.Has("point") && !actorMap.Has("point_layout"))
-            {
+            if (!actorMap.Has("point") && !actorMap.Has("point_layout")) {
                 actorMap.Set<Map>("point", new Map());
             }
         }
-        public void Enable(bool isEnable) {
-            if (Entity != null) {
-                Entity.gameObject.SetActive(isEnable);
-            }
-
-            LOG.Console("node enabled! " + this.Name + ", value: " + isEnable.ToString());
-
-            if (isEnable) {
-                InformActorsAndChildren(ActorState.Enable);
-            } else {
-                InformActorsAndChildren(ActorState.Disable);
-            }
-        }
-        public void InformActorsAndChildren(ActorState state) {
-            InformActors(state);
-
-            foreach (string childName in this.Children) {
-                Node n = NODE.Tree.Get<Node>(childName, null);
-                if (n != null) {
-                    n.InformActorsAndChildren(state);
-                }
-            }
-        }
-        public void InformActors(ActorState state) {
-            foreach (IActor actor in Actors)
-            {
-                actor.Inform(state);
-            }
-        }
-
-        // runtime:
-        public Node AddChild(string nodeName, Map overrideMap)
-        {
-            if (!Children.Contains(this.Name + "." + nodeName))
-            {
-                Node childNode = new Node(nodeName, this.Name, overrideMap, IsLinked);
-
-                if (IsBuilt)
-                    childNode.Build();
-
-                Children.Append(childNode.Name);
-
-                return childNode;
-
-            } else
-            {
-                LOG.Console("tried adding node but one already exists: " + nodeName + ", parent: " + this.Name);
-            }
-            return null;
-        }
-        public bool FindChild(string name, out Node childNode)
-        {
-            if (!name.Contains("."))
-            {
-                name = this.Name + "." + name;
-            }
-
-            LOG.Console($"node find child: {name}");
-
-            // searches children and all children
-            childNode = null;
-            if (Children.Has(name))
-            {
-                childNode = NODE.Tree.Get<Node>(name);
-                if (childNode != null)
-                {
-                    LOG.Console($"node found child! {name}");
-                    return true;
-                }
-            }
-            LOG.Console($"node find could not locate child! {name}");
-            return false;
-        }
-        public bool FindActor(string name, out Actor actor)
-        {
+        public bool FindActor(string name, out Actor actor) {
             IActor iactor = Actors.Get(name);
             actor = null;
             if (iactor == null)
@@ -541,8 +386,7 @@ namespace snorri
             actor = iactor as Actor;
             return true;
         }
-        public bool FindTicker(string name, out Ticker ticker)
-        {
+        public bool FindTicker(string name, out Ticker ticker) {
             IActor iactor = Actors.Get(name);
             ticker = null;
             if (iactor == null)
@@ -551,8 +395,7 @@ namespace snorri
             ticker = iactor as Ticker;
             return true;
         }
-        public bool FindModule(string name, out Module module)
-        {
+        public bool FindModule(string name, out Module module) {
             IActor iactor = Actors.Get(name);
             module = null;
             if (iactor == null)
@@ -561,8 +404,7 @@ namespace snorri
             module = iactor as Module;
             return true;
         }
-        public bool FindOperation(string name, out Operation op)
-        {
+        public bool FindOperation(string name, out Operation op) {
             IActor iactor = Actors.Get(name);
             op = null;
             if (iactor == null)
@@ -571,9 +413,7 @@ namespace snorri
             op = iactor as Operation;
             return true;
         }
-
-        public T GetActor<T>(bool forceAdd = false) where T : IActor
-        {
+        public T GetActor<T>(bool forceAdd = false) where T : IActor {
             foreach (IActor actor in this.Actors)
             {
                 if (actor is T val)
@@ -587,8 +427,7 @@ namespace snorri
             }
             return default(T);
         }
-        public Bag<T> GetBagOActors<T>()
-        {
+        public Bag<T> GetBagOActors<T>() {
             Bag<T> bagOut = new Bag<T>();
 
             foreach (IActor actor in this.Actors)
@@ -601,27 +440,24 @@ namespace snorri
 
             return bagOut;
         }
-        public Bag<T> GetBagOChildActors<T>(bool isLimitedToFirstLevel = false)
-        {
+        public Bag<T> GetBagOChildActors<T>(bool isLimitedToFirstLevel = false) {
             Bag<T> bagOut = GetBagOActors<T>();
-            foreach (string childName in Children)
+            foreach (Node n in Children)
             {
-                Node NodeChild = NODE.Tree.Get<Node>(childName, null);
-                if (NodeChild != null)
+                if (n != null)
                 {
                     if (isLimitedToFirstLevel)
                     {
-                        bagOut.AppendBag(NodeChild.GetBagOActors<T>());
+                        bagOut.AppendBag(n.GetBagOActors<T>());
                     } else
                     {
-                        bagOut.AppendBag(NodeChild.GetBagOChildActors<T>());
+                        bagOut.AppendBag(n.GetBagOChildActors<T>());
                     }
                 }
             }
             return bagOut;
         }
-        public T AddActor<T>(Map vars = null) where T : IActor
-        {
+        public T AddActor<T>(Map vars = null) where T : IActor {
             Type classType = typeof(T);
 
             object o = null;
@@ -657,8 +493,7 @@ namespace snorri
 
             return (T)o;
         }
-        public void AddActor(string actorTypeName)
-        {
+        public void AddActor(string actorTypeName) {
             Type classType = UTIL.GetSnorriType(actorTypeName);
 
             object o = null;
@@ -689,11 +524,26 @@ namespace snorri
                 this.Tickers.Append(ticker);
             }
         }
-        public Coroutine Execute(string routineName, Map args)
-        {
-            LOG.Console($"node has been executed with name: {routineName}");
-            switch (routineName)
+        public void InformActorsAndChildren(ActorState state) {
+            InformActors(state);
+
+            foreach (Node n in Children) {
+                if (n != null) {
+                    n.InformActorsAndChildren(state);
+                }
+            }
+        }
+        public void InformActors(ActorState state) {
+            foreach (IActor actor in Actors)
             {
+                actor.Inform(state);
+            }
+        }
+        
+        // -- coroutines -- //
+        public Coroutine Execute(string routineName, Map args) {
+            LOG.Console($"node has been executed with name: {routineName}");
+            switch (routineName) {
                 case "delay":
                     return Entity.InvokeTask(args.Get<Task>("task", null),
                         args.Get<float>("time_delay", 0.1f));
@@ -705,10 +555,8 @@ namespace snorri
 
             return null;
         }
-        public Coroutine Execute<T>(string routineName, Map args)
-        {
-            switch (routineName)
-            {
+        public Coroutine Execute<T>(string routineName, Map args) {
+            switch (routineName) {
                 case "load":
                     return Entity.InvokeLoad<T>(
                         source:args.Get<IEnumerable<T>>("source_collection", null),
@@ -732,12 +580,12 @@ namespace snorri
             return Entity.InvokeRoutine(routine);
         }
 
+        // -- sync vars -- //
         public void Sync(Map args, Bag<string> exceptions = null) {
             this.Vars.Sync(args, exceptions);
         }
         public void SyncChildren() {
-            foreach (string childName in this.Children) {
-                Node n = NODE.Tree.Get<Node>(childName);
+            foreach (Node n in this.Children) {
                 if (n != null) {
                     n.Sync(this.Vars, new Bag<string>("name"));
                 }
@@ -745,16 +593,15 @@ namespace snorri
         }
         public void SyncAndChildren(Map args, Bag<string> exceptions = null) {
             this.Sync(args, exceptions);
-            foreach (string childName in this.Children) {
-                Node n = NODE.Tree.Get<Node>(childName);
+            foreach (Node n in this.Children) {
                 if (n != null) {
                     n.SyncAndChildren(args, exceptions);
                 }
             }
         }
         
-        public void ExecuteOperation(string operationName, Map args = null)
-        {
+        // -- operations -- //
+        public void ExecuteOperation(string operationName, Map args = null) {
             if (!IsBuilt)
                 return;
             // executes an operation
@@ -767,6 +614,17 @@ namespace snorri
                     }
                 }
             }
+        }
+        
+        // -- static -- //
+        public static GameObject New(string name) {
+            GameObject obj = new GameObject(name);
+            return obj;
+        }
+        public static GameObject NewPrefab(string prefabName) {
+            GameObject obj = NODE.TaskToSpawnPrefab.Execute(prefabName);
+            obj.name = prefabName;
+            return obj;
         }
     }
 }

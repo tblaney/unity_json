@@ -51,7 +51,7 @@ namespace snorri
 
             this.Time = time;
 
-            float totalSecondsInDay = CONFIG.TimeDayLength; // Total Day length in seconds
+            float totalSecondsInDay = GAME.TimeDayLength; // Total Day length in seconds
             float r = time % totalSecondsInDay;
 
             if (Mathf.Equals(r, 0f))
@@ -67,7 +67,7 @@ namespace snorri
             {
                 this.DayNormalized = r / totalSecondsInDay;
 
-                float secondsInHour = ((float)(CONFIG.TimeDayLength))/24f; // 60 minutes * 60 seconds
+                float secondsInHour = ((float)(GAME.TimeDayLength))/24f; // 60 minutes * 60 seconds
                 float secondsInMinute = ((float)(secondsInHour))/60f;
 
                 int hours = (int)(r / secondsInHour);

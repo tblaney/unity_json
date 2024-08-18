@@ -1,0 +1,26 @@
+{
+    "is_prefab": false,
+    "inherit_from": "",
+    "actors": { 
+        
+    },
+    "children": {
+        "layout_canvas_fader": {
+            "inherit_from": "layout/canvas/fader",
+            "actors": {
+
+            }
+        },
+        "light": {
+            "inherit_from": "light/global"
+        },
+        "cursor": {
+            "name": "cursor",
+            "actors": {
+                "cursor": {
+                    "is_visible": true
+                }
+            }
+        }
+    }
+}
