@@ -178,12 +178,12 @@ namespace snorri
                 Remove(k);
             }
         }
-        public void Log()
+        public void Log(string identifierText = "")
         {
             if (Elements == null)
                 return;
 
-            LOG.Console($"::map - {Name}::\n {JSON.ToJson(this)}");
+            LOG.Console($"::map - {Name}, {identifierText}::\n {JSON.ToJson(this)}");
             //LOG.Console(JSON.ToJson(this));
         }
         public void Write(string name, bool isCompress = true, bool isNotify = true)

@@ -46,6 +46,7 @@ namespace snorri
 
             } else
             {
+                //LOG.Console($"JSON found resource map : {resourceName}");
                 return JsonConvert.DeserializeObject<Map>(textAsset.text, JsonSettings);
             }
         }

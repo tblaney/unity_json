@@ -135,6 +135,8 @@ namespace snorri
         }
         void ConfigureScaler()
         {
+            LOG.Console("layout canvas module!");
+            Vars.Log();
             string scalerMode = Vars.Get<string>("scale_mode", "screen");
             switch (scalerMode)
             {
@@ -144,9 +146,9 @@ namespace snorri
                 case "screen":
                     canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
                     
-                    canvasScaler.referenceResolution = new Vector2(1920, 1080); // Example resolution
+                    canvasScaler.referenceResolution = new Vec(Vars.Get<Bag<int>>("resolution", new Bag<int>(1920, 1080))).vec2;
                     canvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
-                    canvasScaler.matchWidthOrHeight = 0.5f; // 0 is width, 1 is height, 0.5 is an equal balance
+                    canvasScaler.matchWidthOrHeight = Vars.Get<float>("match_width_height", 0.5f);
                     break;
                 case "constant":
                     canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ConstantPhysicalSize;

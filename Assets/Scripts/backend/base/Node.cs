@@ -122,6 +122,8 @@ namespace snorri
 
         // -- constructors -- //
         public Node(string nodeName, string resourceFile, Node parentNode = null) {
+            LOG.Console($"node new! {nodeName}, from resource: {resourceFile}");
+
             Vars = new Map();
 
             this.Name = nodeName;
@@ -134,6 +136,8 @@ namespace snorri
             Setup();
         }
         public Node(string nodeName, Map vars, Node parentNode = null) {
+            LOG.Console($"node new! {nodeName}");
+            
             Vars = new Map();
 
             this.Name = nodeName;
@@ -151,13 +155,17 @@ namespace snorri
             ChildrenSetup();
         }
         void InheritSetup() {
-            LOG.Console("node inherit setup: " + this.Name);
             string inheritName = VarsResource.Get<string>("inherit_from", "");
+            LOG.Console("node inherit setup: " + this.Name + ", " + inheritName);
             if (inheritName != "") {
-                Map m = JSON.GetResourceMap(inheritName, "nodes");
-                m.Sync(this.VarsResource);
-                this.VarsResource = m;
+                Node inheritNode = new Node(this.Name, inheritName, this.Parent);
+                this.InheritFrom(inheritNode);
             }   
+        }
+        public void InheritFrom(Node otherNode)
+        {
+            otherNode.VarsResource.Sync(this.VarsResource, new Bag<string>("inherit_from"));
+            this.VarsResource = otherNode.VarsResource;
         }
         void ChildrenSetup() {
             Map childMap = VarsResource.Get<Map>("children", new Map());

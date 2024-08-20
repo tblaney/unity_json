@@ -9,10 +9,6 @@ namespace snorri
     public class GameSystem : MonoBehaviour
     {
         bool firstUpdate = false;
-        
-        public string setupStage = "stage_setup";
-        public string startStage = "stage_main_menu";
-
         public EventSystem eventSystem;
 
         void Awake()
@@ -30,14 +26,14 @@ namespace snorri
         {
             // should initiate the starting scene
 
-            GAME.Stage = GAME.Vars.Get<string>(setupStage, "");
+            GAME.Stage = GAME.Vars.Get<string>("stage_setup", "");
         }
 
         void Update()
         {
             if (firstUpdate)
             {
-                GAME.Stage = GAME.Vars.Get<string>(startStage, "");
+                GAME.Stage = GAME.Vars.Get<string>("stage_start", "");
                 firstUpdate = false;
             }
         }
